@@ -1,5 +1,5 @@
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Young Serif', sans-serif;
 }
 
 
@@ -20,7 +20,7 @@ body {
 
 .teaser .hero-body {
   padding-top: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 0rem;
 }
 
 .teaser {
@@ -129,7 +129,7 @@ body {
 
 
 .interpolation-panel {
-  background: #f5f5f5;
+  background: #f5f5f530;
   border-radius: 15px;
 }
 
@@ -224,8 +224,8 @@ body {
   height: 80px;
   text-align: center;
   line-height: 75px;
-  background-color: #f3f3f3cb;
-  color: #919191;
+  background-color: #edededcb;
+  color: #717171;
   cursor: pointer;
   border: 0;
   border-radius: 50%;
@@ -239,7 +239,7 @@ body {
 }
 
 #back-to-top:hover {
-  background-color: #e9ebec;
+  background-color: #dbdbdb;
 }
 
 .cute-box {
@@ -271,11 +271,47 @@ body {
 }
 
 .scrollable-pane {
-  width: 400px; /* Adjust as needed */
+  width: 380px; /* Adjust as needed */
   height: 350px; /* Adjust as needed */
   overflow-y: auto;
   border: 1px solid #ccc;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 10px;
+}
+
+#navbar {
+  background-color: #ffffff;
+  opacity: 0.7;
+  color: rgb(26, 26, 26);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2px;
+  z-index: 99999;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+
+}
+
+#navbar a {
+  color: rgb(107, 107, 107);
+  /* font-weight: bold; */
+  font-family: 'Trebuchet MS';
+  font-size: 25px;
+  text-decoration: none;
+}
+body {
+  background-image: url("../images/bg4.png");
+  background-size: 1800px;
+  background-position: top center;
+  background-repeat:no-repeat;
+  background-blend-mode: color;
+  /* color: white;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
 }

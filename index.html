@@ -34,6 +34,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
+          <br/>
           <h1 class="title is-1 publication-title">SoftPhy: </h1><h1 class="title is-2 has-text-centered">Soft-Body Physical Concept Learning and Reasoning from Videos</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -52,6 +53,18 @@
     </div>
   </div>
 </section>
+
+<nav id="navbar">
+  <a href="#content5">Abstract</a>
+  <a href="#content6">Motivation</a>
+  <a href="#content1"><strong><span style="color: rgb(0, 0, 0);">Fluid</span></strong></a>
+  <a href="#content2"><strong><span style="color: rgb(0, 0, 0);">Rope</span></strong></a>
+  <a href="#content3"><strong><span style="color: rgb(0, 0, 0);">Cloth</span></strong></a>
+  <a href="#content4"><strong><span style="color: rgb(0, 0, 0);">Ball</span></strong></a>
+  <a href="#content7">Experiments</a>
+  <a href="#content8">Statistics</a>
+  <a href="#content9">Others</a>
+</nav>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -138,47 +151,54 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We introduce the <strong><u>Soft-Body Physical Dataset (SOPHY)</u></strong>, a novel benchmark for
-            evaluating machine models in <strong>physical reasoning across diverse scenarios for
-              soft bodies</strong>.
-          </p>
-          <p>
-            The SOPHY is specifically designed to be complementary with
-            existing physical reasoning benchmarks by <strong>encompassing diverse physical property
-            inferences</strong> for soft bodies like physical parameters such as mass and density across
-            dynamic situations and <strong>predicting corresponding dynamics</strong>. This comprehensive
-            dataset enables the development and assessment of AI models with human-like
-            visual reasoning abilities in understanding both rigid objects and soft objects' visual
-            attributes, physical properties, and dynamics while devising goal-oriented solutions.
-            We evaluated a range of AI models and found that they still struggle to achieve
-            satisfactory performance, which shows that current AI models still lack physical
-            commonsense for soft objects and illustrates the value of the proposed dataset. 
-          </p>
-          <p>
-            We hope the <span class="dnerf">SOPHY</span> fosters advancements in AI perception and reasoning in diverse
-            physical environments, bridging the gap between human and machine intelligence
-            in the physical world.
-          </p>
-        </div>
-        <br/>
-        <h2 class="title is-3">Motivation</h2>
-        <div class="columns is-vcentered">
-          <div class="column is-12 has-text-centered">
-            <img src="static/images/teaser.png" alt="teaser" class="showcase-qa">
+        <div id="content5">
+          <br/>
+          <br/>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce the <strong><u>Soft-Body Physical Dataset (SOPHY)</u></strong>, a novel benchmark for
+              evaluating machine models in <strong>physical reasoning across diverse scenarios for
+                soft bodies</strong>.
+            </p>
+            <p>
+              The SOPHY is specifically designed to be complementary with
+              existing physical reasoning benchmarks by <strong>encompassing diverse physical property
+              inferences</strong> for soft bodies like physical parameters such as mass and density across
+              dynamic situations and <strong>predicting corresponding dynamics</strong>. This comprehensive
+              dataset enables the development and assessment of AI models with human-like
+              visual reasoning abilities in understanding both rigid objects and soft objects' visual
+              attributes, physical properties, and dynamics while devising goal-oriented solutions.
+              We evaluated a range of AI models and found that they still struggle to achieve
+              satisfactory performance, which shows that current AI models still lack physical
+              commonsense for soft objects and illustrates the value of the proposed dataset. 
+            </p>
+            <p>
+              We hope the <span class="dnerf">SOPHY</span> fosters advancements in AI perception and reasoning in diverse
+              physical environments, bridging the gap between human and machine intelligence
+              in the physical world.
+            </p>
           </div>
         </div>
-        <h2 class="content has-text-justified">
-          <strong>The motivation is derived from a range of everyday soft materials, whose physical behaviors
-          or functions vary because of their diverse physical properties.</strong> a) Gasoline flows more fluently than
-          glue due to lower viscosity, while oil with lower density tends to float above water. b) Poplin and
-          canvas exhibit surface wrinkles with varying granularity due to their distinct bending compliance.
-          c) The lifting approach requires less force due to the re-distributed tensile forces facilitated by the
-          movable pulley. d) Trajectories of tennis ball and dough ball demonstrate their differing elasticity and
-          plasticity.
-        </h2>
+        <div id="content6">
+          <br/>
+          <br/>
+          <h2 class="title is-3">Motivation</h2>
+          <div class="columns is-vcentered">
+            <div class="column is-12 has-text-centered">
+              <img src="static/images/teaser.png" alt="teaser" class="showcase-qa">
+            </div>
+          </div>
+          <h2 class="content has-text-justified">
+            <strong>The motivation is derived from a range of everyday soft materials, whose physical behaviors
+            or functions vary because of their diverse physical properties.</strong> a) Gasoline flows more fluently than
+            glue due to lower viscosity, while oil with lower density tends to float above water. b) Poplin and
+            canvas exhibit surface wrinkles with varying granularity due to their distinct bending compliance.
+            c) The lifting approach requires less force due to the re-distributed tensile forces facilitated by the
+            movable pulley. d) Trajectories of tennis ball and dough ball demonstrate their differing elasticity and
+            plasticity.
+          </h2>
+        </div>
       </div>
     </div>
     <!--/ Abstract. -->
@@ -190,6 +210,8 @@
   <div class="container is-max-desktop has-text-centered">
     <!-- Fluid. -->
     <div id="content1" class="content-section">
+      <br/>
+      <br/>
       <div class="columns  is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3"><img src="static/images/fluid.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Fluid Hourglass</h2>
@@ -246,7 +268,7 @@
                 
                 <div class="scrollable-pane">
 
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
                     <h4>Density I</h4>
                     <p>Is the <u><strong>density</strong></u> of the <strong><span style="color: orange;">orange fluid</span></strong> greater than that of the <strong><span style="color: rgb(4, 150, 4);">green fluid</span></strong>?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
@@ -261,7 +283,7 @@
 
                   <br> <!-- Spacing between the two QA pairs -->
 
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
                     <h4>Density II</h4>
                     <p>Is the <u><strong>density</strong></u> of the <strong><span style="color: pink;">pink fluid</span></strong> less than that of the <strong><span style="color: orange;">orange fluid</span></strong>?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
@@ -277,14 +299,14 @@
       
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-4 has-text-centered">Dynamics Questions</h2>
+              <h3 class="title is-4 has-text-centered">Dynamics Questions</h3>
               <div class="columns is-centered">
                 <div class="column content"  style="font-size: 1.0em;">
 
                   <div class="scrollable-pane">
 
                     <!-- First QA Pair -->
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                       <h4>Temporal Predictive Question</h4> 
                       <p>Will most fluid from the <strong><span style="color: rgb(4, 150, 4);">other green emitter</span></strong> pass the <strong><span style="color: red;">red stick</span></strong>?</p>
                       <ul style="list-style-type: none; padding-left: 0;">
@@ -296,7 +318,7 @@
                     <br> <!-- Spacing between the two QA pairs -->
 
                     <!-- Second QA Pair -->
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
                       <h4>Counterfactual Question</h4>
                       <p>If the <strong><span style="color: red;">red stick</span></strong> were removed, would most <strong><span style="color: orange;">orange fluid</span></strong> flow into the <strong><span style="color: rgb(35, 219, 219);">cyan container</span></strong>?</p>
                       <ul style="list-style-type: none; padding-left: 0;">
@@ -307,7 +329,7 @@
 
                     <br> <!-- Spacing between the two QA pairs -->
 
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
                       <h4>Goal-Driven Question</h4>
                       <p>What can we do to guide most of the <strong><span style="color: orange;">orange fluid</span></strong> into the <strong><span style="color: rgb(35, 219, 219);">cyan container</span></strong>?</p>
                       <ul style="list-style-type: none; padding-left: 0;">
@@ -358,14 +380,15 @@
 
         </div>
       </div>
-      <br/>
-      <br/>
+      
     </div>
     <!--/ Fluid. -->
 
 
     <!-- Rope. -->
     <div id="content2" class="content-section">
+      <br/>
+      <br/>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3"><img src="static/images/rope.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Rope-Pulley System</h2>
@@ -427,7 +450,7 @@
                 <div class="scrollable-pane">
 
                   <!-- First QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
                     <h4>Mass I</h4>
                     <p>Is the <u><strong>mass</strong></u> of the <strong><span style="color: purple;">purple cube</span></strong> greater than <strong>twice</strong> that of the <strong><span style="color: brown;">brown cube</span></strong>?</p>
 
@@ -441,7 +464,7 @@
                   <br> <!-- Spacing between the QA pairs -->
 
                   <!-- Second QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Mass II</h4>
                     <p>Is the <u><strong>mass</strong></u> of the <strong>sphere</strong> less than that of the <strong><span style="color: brown;">brown cube</span></strong>?</p>         
                     <ul style="list-style-type: none; padding-left: 0;">
@@ -454,7 +477,7 @@
                   <br> <!-- Spacing between the QA pairs -->
 
                   <!-- Third QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8prgb(35, 219, 219)x rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8prgb(35, 219, 219)x rgba(0,0,0,0.1);">
                     <h4>Tension</h4>
                     <p>Is the <u><strong>tension</strong></u> in the <strong><span style="color: black;">black rope</span></strong> approximately equal to half that in the <strong><span style="color: red;">red rope</span></strong> (i.e. the short rope linking purple cube)?</p>
 
@@ -471,14 +494,14 @@
       
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-4 has-text-centered">Dynamics Questions</h2>
+              <h3 class="title is-4 has-text-centered">Dynamics Questions</h3>
 
               <div class="scrollable-pane">
               
                 <div class="columns is-centered">
                   <div class="column content"  style="font-size: 1.0em;">
                     <!-- Fourth QA Pair -->
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                       <h4>Counterfactual Question</h4>
                       <p>If the <strong><span style="color: purple;">purple cube</span></strong> were far much heavier, which direction would the <strong><span style="color: rgb(0, 110, 255);">blue movable pulley</span></strong> rotate?</p>
 
@@ -492,7 +515,7 @@
                     <br> <!-- Spacing between the QA pairs -->
 
                     <!-- Fifth QA Pair -->
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                       <h4>Goal-Driven Question</h4>
                       <p>What can we do to rotate the <strong><span style="color: rgb(0, 110, 255);">blue fixed pulley</span></strong> clockwise?</p>
                       
@@ -507,7 +530,7 @@
                     <br> <!-- Spacing between the QA pairs -->
 
                     <!-- Sixth QA Pair -->
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                       <h4>Goal-Driven Question</h4>
                       <p>What can we do to lift the <strong><span style="color: red;">red cube</span></strong> upwards?</p>
 
@@ -558,14 +581,14 @@
 
         </div>
       </div>
-    <br/>
-    </br>
     </div>
     <!--/ Rope. -->
 
 
     <!-- Cloth. -->
     <div id="content3" class="content-section">
+      <br/>
+      <br/>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3"><img src="static/images/cloth.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Cloth Magic Trick</h2>
@@ -631,7 +654,7 @@
 
                 <div class="scrollable-pane">
 
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Bending Compliance</h4>
                     <p>Is the <strong>left cloth</strong> much easier to <u><strong>bend or have wrinkles</strong></u> than the other?</p>
 
@@ -646,7 +669,7 @@
                   <br>
                   
                   <!-- First QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Stretching Compliance</h4>
                     <p>Is the <u><strong>elasticity</strong></u> of the <strong>right cloth</strong> much greater than that of the other?</p>
 
@@ -659,7 +682,7 @@
                   <br> <!-- Spacing between the two QA pairs -->
 
                   <!-- Second QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Friction</h4>
                     <p>Is the <u><strong>friction</strong></u> on the <strong>right cloth</strong> much greater than the other?</p>
 
@@ -679,14 +702,14 @@
       
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-4 has-text-centered">Dynamics Questions</h2>
+              <h3 class="title is-4 has-text-centered">Dynamics Questions</h3>
               <div class="columns is-centered">
                 <div class="column content"  style="font-size: 1.0em;">
                   
                 <div class="scrollable-pane">
 
                   <!-- First QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Spatial Predictive Question</h4>
                     <p>Does the <strong><span style="color: rgb(136, 136, 136);">white pillar</span></strong> collide with the <strong><span style="color: rgb(144, 144, 2);">yellow plate</span></strong>?</p>
 
@@ -700,7 +723,7 @@
                   <br> <!-- Spacing between the QA pairs -->
 
                   <!-- Second QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Spatial Predictive Question</h4>
                     <p>Is the <strong><span style="color: rgb(144, 144, 2);">yellow plate</span></strong> finally in touch with the <strong><span style=" color: rgb(136, 136, 136);">white pillar</span></strong>?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
@@ -713,7 +736,7 @@
                   <br> <!-- Spacing between the QA pairs -->
 
                   <!-- Third QA Pair -->
-                  <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Spatial Predictive Question</h4>
                     <p>Which phrase below can best describe the final pose of the <strong><span style="color: brown;">brown pillar</span></strong>?</p>
                     
@@ -765,14 +788,14 @@
 
         </div>
       </div>
-    <br/>
-    </br>
     </div>
     <!--/ Cloth. -->
 
 
     <!-- Ball. -->
     <div id="content4" class="content-section">
+      <br/>
+      <br/>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3"><img src="static/images/ball.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Ball Playground</h2>
@@ -836,7 +859,7 @@
                 <div class="scrollable-pane">
 
                   <!-- First QA Pair -->
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                       <h4>Deformation Resistance</h4>
                       <p>Is the <u><strong>deformation resistance</strong></u> of the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> much less than the <strong><span style="color: rgb(0, 110, 255);">blue ball</span></strong>?</p>
 
@@ -849,7 +872,7 @@
                     <br> <!-- Spacing between the QA pairs -->
 
                     <!-- Second QA Pair -->
-                    <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                       <h4>Plasticity</h4>
                       <p>Is the <u><strong>plasticity</strong></u> of the <strong><span style="color: red;">red ball</span></strong> much less than the <strong><span style="color: rgb(0, 110, 255);">blue ball</span></strong>?</p>
                       <ul style="list-style-type: none; padding-left: 0;">
@@ -864,12 +887,12 @@
     
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-4 has-text-centered">Dynamics Questions</h2>
+              <h3 class="title is-4 has-text-centered">Dynamics Questions</h3>
               <div class="columns is-centered">
                 <div class="column content"  style="font-size: 1.0em;">
                   <div class="scrollable-pane">
                       <!-- First QA Pair -->
-                      <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                      <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                         <h4>Temporal Predictive Question</h4>
                         <p>Which pit will the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> finally drop into?</p>
 
@@ -883,7 +906,7 @@
                       <br> <!-- Spacing between the QA pairs -->
 
                       <!-- Second QA Pair -->
-                      <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                      <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                         <h4>Counterfactual Question</h4>
                         <p>If we removed the <strong><span style="color: rgb(35, 219, 219);">cyan floating wall</span></strong> and other balls, which pit would the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> drop into?</p>
                         <ul style="list-style-type: none; padding-left: 0;">
@@ -896,7 +919,7 @@
                       <br> <!-- Spacing between the QA pairs -->
 
                       <!-- Third QA Pair -->
-                      <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                      <div style="border: 1px solid #ccc; padding: 20px; width: 330px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                         <h4>Goal-Driven Question</h4>
                         <p>What can we do to let the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> drop into the right pit?</p>
 
@@ -944,8 +967,6 @@
     
         </div>
       </div>
-    <br/>
-    </br>
     </div>
   
     <!--/ Ball. -->
@@ -957,48 +978,60 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Experiments</h2>
-        <div class="columns is-vcentered">
-          <div class="column is-12 has-text-centered">
-            <img src="static/images/experiments.png" alt="experiments" class="showcase-qa">
+        <div id="content7">
+          <br/>
+          <br/>
+          <h2 class="title is-3">Experiments</h2>
+          <div class="columns is-vcentered">
+            <div class="column is-12 has-text-centered">
+              <img src="static/images/experiments.png" alt="experiments" class="showcase-qa">
+            </div>
           </div>
+          <h2 class="content has-text-justified">
+            Physical reasoning on SOPHY. We list all question families, <strong>Prop</strong>erty, <strong>Counter</strong>factual,
+            <strong>Goal</strong>-driven and <strong>Pred</strong>ictive questions. Accuracies are reported with per option and per question.
+          </h2>
         </div>
-        <h2 class="content has-text-justified">
-          Physical reasoning on SOPHY. We list all question families, <strong>Prop</strong>erty, <strong>Counter</strong>factual,
-          <strong>Goal</strong>-driven and <strong>Pred</strong>ictive questions. Accuracies are reported with per option and per question.
-        </h2>
       </div>
     </div>
     <!--/ Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Question Distribution</h2>
-        <div class="columns is-vcentered">
-          <div class="column is-12 has-text-centered">
-            <img src="static/images/distr1.png" alt="distribution" class="showcase-qa">
+        <div id="content8">
+          <br/>
+          <br/>
+          <h2 class="title is-3">Question Distribution</h2>
+          <div class="columns is-vcentered">
+            <div class="column is-12 has-text-centered">
+              <img src="static/images/distr1.png" alt="distribution" class="showcase-qa">
+            </div>
           </div>
+          <h2 class="content has-text-centered">
+            Question distribution statistics of fluid, rope, cloth and ball.
+          </h2>
         </div>
-        <h2 class="content has-text-justified">
-          Question distribution statistics of fluid, rope, cloth and ball.
-        </h2>
       </div>
     </div>
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Dataset Details</h2>
-        <div class="columns is-vcentered">
-          <div class="column is-12 has-text-centered">
-            <div class="item item-fullbody">
-              <video poster="static/videos/teasers/sensor.png" id="fullbody"  controls muted loop playsinline height="100%">
-                <source src="./static/videos/teasers/sensors.mp4" type="video/mp4">
-              </video>
+        <div id="content9">
+          <br/>
+          <br/>
+          <h2 class="title is-3">Dataset Details</h2>
+          <div class="columns is-vcentered">
+            <div class="column is-12 has-text-centered">
+              <div class="item item-fullbody">
+                <video poster="static/videos/teasers/sensor.png" id="fullbody"  controls muted loop playsinline height="100%">
+                  <source src="./static/videos/teasers/sensors.mp4" type="video/mp4">
+                </video>
+              </div>
             </div>
           </div>
+          <h2 class="content has-text-justified">
+            Sensor data outputs are multimodal, depicting the 4D states of objects across various levels,
+  ranging from object-level, point-level to event-level.
+          </h2>
         </div>
-        <h2 class="content has-text-justified">
-          Sensor data outputs are multimodal, depicting the 4D states of objects across various levels,
-ranging from object-level, point-level to event-level.
-        </h2>
       </div>
     </div>
   </div>
