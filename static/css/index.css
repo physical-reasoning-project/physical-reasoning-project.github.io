@@ -253,3 +253,20 @@ body {
   max-width: 200px;      /* Maximum width of the box */
   margin: 20px auto;     /* Centers the box horizontally on the page */
 }
+
+/* Common styles for both checked and unchecked options */
+.option::before {
+  content: "\2714";  /* Default to checkmark */
+  padding-right: 5px;
+  visibility: hidden;  /* Hide by default */
+  font-size: 29px;  /* Adjust this value to make the checkmark larger */
+  line-height: 0.9;  /* Adjust line height */
+  vertical-align: middle;  /* Align the checkmark with the middle of the text */
+}
+
+/* Styles for checked option */
+.checked::before {
+  visibility: visible;  /* Show the checkmark */
+  color: rgb(224, 10, 10);
+}
+

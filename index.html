@@ -59,12 +59,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <!-- Intro. -->
-          <div class="columns is-centered">
-            <div class="content has-text-justified">
               <h2 class="title is-3">Menu</h2>
-              <p></p> 
-            </div>
-          </div>
           <!-- <div class="exampletoggle">
               <div id="show1" onmouseover="showexample(1)" class="active">Example 1</div>
               <div id="show2" onmouseover="showexample(2)">Example 2</div>
@@ -251,19 +246,19 @@
             <!-- Visual Effects. -->
             <div class="column">
               <div class="content" style="font-size: 1.0em;">
-                <h3 class="title is-3">Physical Property Questions</h3>
+                <h3 class="title is-4">Physical Property Questions</h3>
                 
                 <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
                   <h4>Density I</h4>
                   <p>Is the <u><strong>density</strong></u> of the <strong><span style="color: orange;">orange fluid</span></strong> greater than that of the <strong><span style="color: rgb(4, 150, 4);">green fluid</span></strong>?</p>
                   <ul style="list-style-type: none; padding-left: 0;">
-                      <li>a) Yes</li>
-                      <li>b) No</li>
-                      <li>c) Cannot Judge</li>
+                      <li class="option checked">a) Yes</li>
+                      <li class="option">b) No</li>
+                      <li class="option">c) Cannot Judge</li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                  <!-- <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
                       <strong>Answer:</strong> a) Yes
-                  </div>
+                  </div> -->
                 </div>
 
                 <br> <!-- Spacing between the two QA pairs -->
@@ -272,13 +267,10 @@
                   <h4>Density II</h4>
                   <p>Is the <u><strong>density</strong></u> of the <strong><span style="color: pink;">pink fluid</span></strong> less than that of the <strong><span style="color: orange;">orange fluid</span></strong>?</p>
                   <ul style="list-style-type: none; padding-left: 0;">
-                      <li>a) Yes</li>
-                      <li>b) No</li>
-                      <li>c) Cannot Judge</li>
+                    <li class="option">a) Yes</li>
+                    <li class="option">b) No</li>
+                    <li class="option checked">c) Cannot Judge</li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                      <strong>Answer:</strong> c) Cannot Judge
-                  </div>
               </div>
 
               </div>
@@ -287,7 +279,7 @@
       
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-3">Dynamics Questions</h2>
+              <h2 class="title is-4">Dynamics Questions</h2>
               <div class="columns is-centered">
                 <div class="column content"  style="font-size: 1.0em;">
                   <!-- First QA Pair -->
@@ -295,12 +287,9 @@
                     <h4>Temporal Predictive Question</h4> 
                     <p>Will most fluid from the <strong><span style="color: rgb(4, 150, 4);">other green emitter</span></strong> pass the <strong><span style="color: red;">red stick</span></strong>?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Yes</li>
-                        <li>b) No</li>
+                      <li class="option">a) Yes</li>
+                      <li class="option checked">b) No</li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> b) No
-                    </div>
                   </div>
 
                   <br> <!-- Spacing between the two QA pairs -->
@@ -310,12 +299,9 @@
                     <h4>Counterfactual Question</h4>
                     <p>If the <strong><span style="color: red;">red stick</span></strong> were removed, would most <strong><span style="color: orange;">orange fluid</span></strong> flow into the <strong><span style="color: rgb(35, 219, 219);">cyan container</span></strong>?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Yes</li>
-                        <li>b) No</li>
+                      <li class="option checked">a) Yes</li>
+                      <li class="option">b) No</li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> a) Yes
-                    </div>
                   </div>
 
                   <br> <!-- Spacing between the two QA pairs -->
@@ -324,14 +310,11 @@
                     <h4>Goal-Driven Question</h4>
                     <p>What can we do to guide most of the <strong><span style="color: orange;">orange fluid</span></strong> into the <strong><span style="color: rgb(35, 219, 219);">cyan container</span></strong>?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Remove the <strong><span style="color: red;">red stick</span></strong></li>
-                        <li>b) Remove the <strong><span style="color: orange;">orange stick</span></strong></li>
-                        <li>c) Remove the <strong><span style="color: rgb(0, 110, 255);">blue stick</span></strong></li>
-                        <li>d) Remove the <strong><span style="color: gray;">gray stick</span></strong></li>
+                      <li class="option checked">a) Remove the <strong><span style="color: red;">red stick</span></strong></li>
+                      <li class="option">b) Remove the <strong><span style="color: orange;">orange stick</span></strong></li>
+                      <li class="option">c) Remove the <strong><span style="color: rgb(0, 110, 255);">blue stick</span></strong></li>
+                      <li class="option">d) Remove the <strong><span style="color: gray;">gray stick</span></strong></li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> a) Remove the red stick
-                    </div>
                   </div>
                 
 
@@ -438,19 +421,17 @@
             <!-- Visual Effects. -->
             <div class="column">
               <div class="content"  style="font-size: 1.0em;">
-                <h3 class="title is-3">Physical Property Questions</h3>
+                <h3 class="title is-4">Physical Property Questions</h3>
                 <!-- First QA Pair -->
                 <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
                   <h4>Mass I</h4>
                   <p>Is the <u><strong>mass</strong></u> of the <strong><span style="color: purple;">purple cube</span></strong> greater than <strong>twice</strong> that of the <strong><span style="color: brown;">brown cube</span></strong>?</p>
+
                   <ul style="list-style-type: none; padding-left: 0;">
-                      <li>a) Yes</li>
-                      <li>b) No</li>
-                      <li>c) Cannot Judge</li>
+                    <li class="option">a) Yes</li>
+                    <li class="option checked">b) No</li>
+                    <li class="option">c) Cannot Judge</li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                      <strong>Answer:</strong> b) No
-                  </div>
                 </div>
 
                 <br> <!-- Spacing between the QA pairs -->
@@ -458,15 +439,12 @@
                 <!-- Second QA Pair -->
                 <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                   <h4>Mass II</h4>
-                  <p>Is the <u><strong>mass</strong></u> of the <strong>sphere</strong> less than that of the <strong><span style="color: brown;">brown cube</span></strong>?</p>
+                  <p>Is the <u><strong>mass</strong></u> of the <strong>sphere</strong> less than that of the <strong><span style="color: brown;">brown cube</span></strong>?</p>         
                   <ul style="list-style-type: none; padding-left: 0;">
-                      <li>a) Yes</li>
-                      <li>b) No</li>
-                      <li>c) Cannot Judge</li>
+                    <li class="option">a) Yes</li>
+                    <li class="option">b) No</li>
+                    <li class="option checked">c) Cannot Judge</li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                      <strong>Answer:</strong> c) Cannot Judge
-                  </div>
                 </div>
 
                 <br> <!-- Spacing between the QA pairs -->
@@ -475,14 +453,12 @@
                 <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8prgb(35, 219, 219)x rgba(0,0,0,0.1);">
                   <h4>Tension</h4>
                   <p>Is the <u><strong>tension</strong></u> in the <strong><span style="color: black;">black rope</span></strong> approximately equal to half that in the <strong><span style="color: red;">red rope</span></strong> (i.e. the short rope linking purple cube)?</p>
+
                   <ul style="list-style-type: none; padding-left: 0;">
-                      <li>a) Yes</li>
-                      <li>b) No</li>
-                      <li>c) Cannot Judge</li>
+                    <li class="option checked">a) Yes</li>
+                    <li class="option">b) No</li>
+                    <li class="option">c) Cannot Judge</li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                      <strong>Answer:</strong> a) Yes
-                  </div>
                 </div>
               </div>
             </div>
@@ -490,21 +466,19 @@
       
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-3">Dynamics Questions</h2>
+              <h2 class="title is-4">Dynamics Questions</h2>
               <div class="columns is-centered">
                 <div class="column content"  style="font-size: 1.0em;">
                   <!-- Fourth QA Pair -->
                   <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Counterfactual Question</h4>
                     <p>If the <strong><span style="color: purple;">purple cube</span></strong> were far much heavier, which direction would the <strong><span style="color: rgb(0, 110, 255);">blue movable pulley</span></strong> rotate?</p>
+
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Anti-clockwise</li>
-                        <li>b) Clockwise</li>
-                        <li>c) Not affected</li>
+                      <li class="option checked">a) Anti-clockwise</li>
+                      <li class="option">b) Clockwise</li>
+                      <li class="option">c) Not affected</li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> a) Anti-clockwise
-                    </div>
                   </div>
 
                   <br> <!-- Spacing between the QA pairs -->
@@ -513,15 +487,13 @@
                   <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Goal-Driven Question</h4>
                     <p>What can we do to rotate the <strong><span style="color: rgb(0, 110, 255);">blue fixed pulley</span></strong> clockwise?</p>
+                    
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Decrease <strong><span style="color: gray;">gray cube</span></strong> mass</li>
-                        <li>b) Decrease <strong><span style="color: brown;">brown cube</span></strong> mass</li>
-                        <li>c) Increase sphere mass</li>
-                        <li>d) None of the above works</li>
+                      <li class="option">a) Decrease <strong><span style="color: gray;">gray cube</span></strong> mass  </li>
+                      <li class="option checked">b) Decrease <strong><span style="color: brown;">brown cube</span></strong> mass</li>
+                      <li class="option">c) Increase sphere mass                                                          </li>
+                      <li class="option">d) None of the above works                                                       </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> b) Decrease brown cube mass
-                    </div>
                   </div>
 
                   <br> <!-- Spacing between the QA pairs -->
@@ -530,15 +502,13 @@
                   <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Goal-Driven Question</h4>
                     <p>What can we do to lift the <strong><span style="color: red;">red cube</span></strong> upwards?</p>
+
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Decrease <strong><span style="color: red;">red cube</span></strong> mass</li>
-                        <li>b) Increase <strong><span style="color: purple;">purple cube</span></strong> mass</li>
-                        <li>c) Increase sphere mass</li>
-                        <li>d) None of the above works</li>
+                      <li class="option checked">a) Decrease <strong><span style="color: red;">red cube</span></strong> mass       </li>
+                      <li class="option">b) Increase <strong><span style="color: purple;">purple cube</span></strong> mass </li>
+                      <li class="option checked">c) Increase sphere mass                                                             </li>
+                      <li class="option">d) None of the above works                                                          </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> a) and c)
-                    </div>
                   </div>
                 </div>
       
@@ -661,17 +631,17 @@
             <!-- Visual Effects. -->
             <div class="column">
               <div class="content"  style="font-size: 1.0em;">
-                <h3 class="title is-3">Physical Property Questions</h3>
+                <h3 class="title is-4">Physical Property Questions</h3>
                 <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                   <h4>Bending Compliance</h4>
                   <p>Is the <strong>left cloth</strong> much easier to <u><strong>bend or have wrinkles</strong></u> than the other?</p>
+
+
                   <ul style="list-style-type: none; padding-left: 0;">
-                    <li>a) Yes</li>
-                    <li>b) No</li>
+                    <li class="option">a) Yes </li>
+                    <li class="option checked">b) No </li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                      <strong>Answer:</strong> b) No
-                  </div>
+
                 </div>  
 
                 <br>
@@ -680,13 +650,11 @@
                 <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                   <h4>Stretching Compliance</h4>
                   <p>Is the <u><strong>elasticity</strong></u> of the <strong>right cloth</strong> much greater than that of the other?</p>
+
                   <ul style="list-style-type: none; padding-left: 0;">
-                      <li>a) Yes</li>
-                      <li>b) No</li>
+                    <li class="option checked">a) Yes </li>
+                    <li class="option">b) No </li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                      <strong>Answer:</strong> a) Yes
-                  </div>
                 </div>
 
                 <br> <!-- Spacing between the two QA pairs -->
@@ -695,13 +663,12 @@
                 <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                   <h4>Friction</h4>
                   <p>Is the <u><strong>friction</strong></u> on the <strong>right cloth</strong> much greater than the other?</p>
+
                   <ul style="list-style-type: none; padding-left: 0;">
-                      <li>a) Yes</li>
-                      <li>b) No</li>
+                    <li class="option checked">a) Yes </li>
+                    <li class="option">b) No </li>
                   </ul>
-                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                      <strong>Answer:</strong> a) Yes
-                  </div>
+
                 </div>
 
 
@@ -713,7 +680,7 @@
       
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-3">Dynamics Questions</h2>
+              <h2 class="title is-4">Dynamics Questions</h2>
               <div class="columns is-centered">
                 <div class="column content"  style="font-size: 1.0em;">
 
@@ -721,13 +688,12 @@
                   <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Spatial Predictive Question</h4>
                     <p>Does the <strong><span style="background-color: rgb(165, 165, 165); color: white;">white pillar</span></strong> collide with the <strong><span style="background-color: rgb(165, 165, 165); color: yellow;">yellow plate</span></strong>?</p>
+
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Yes</li>
-                        <li>b) No</li>
+                      <li class="option checked">a) Yes </li>
+                      <li class="option">b) No </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> a) Yes
-                    </div>
+
                   </div>
 
                   <br> <!-- Spacing between the QA pairs -->
@@ -737,12 +703,10 @@
                     <h4>Spatial Predictive Question</h4>
                     <p>Is the <strong><span style="background-color: rgb(165, 165, 165); color: yellow;">yellow plate</span></strong> finally in touch with the <strong><span style="background-color: rgb(165, 165, 165); color: white;">white pillar</span></strong>?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Yes</li>
-                        <li>b) No</li>
+                      <li class="option">a) Yes </li>
+                      <li class="option checked">b) No </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> b) No
-                    </div>
+
                   </div>
 
                   <br> <!-- Spacing between the QA pairs -->
@@ -751,14 +715,12 @@
                   <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Spatial Predictive Question</h4>
                     <p>Which phrase below can best describe the final pose of the <strong><span style="color: brown;">brown pillar</span></strong>?</p>
+                    
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Standing upright</li>
-                        <li>b) Leaning</li>
-                        <li>c) Lying horizontally</li>
+                      <li class="option">        a) Standing upright   </li>
+                      <li class="option checked">b) Leaning            </li>
+                      <li class="option">c) Lying horizontally </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> b) Leaning
-                    </div>
                   </div>
 
 
@@ -869,18 +831,16 @@
             <!-- Visual Effects. -->
             <div class="column">
               <div class="content"  style="font-size: 1.0em;">
-                <h3 class="title is-3">Physical Property Questions</h3>
+                <h3 class="title is-4">Physical Property Questions</h3>
                <!-- First QA Pair -->
               <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                 <h4>Deformation Resistance</h4>
                 <p>Is the <u><strong>deformation resistance</strong></u> of the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> much less than the <strong><span style="color: rgb(0, 110, 255);">blue ball</span></strong>?</p>
+
                 <ul style="list-style-type: none; padding-left: 0;">
-                    <li>a) Yes</li>
-                    <li>b) No</li>
+                  <li class="option checked">a) Yes </li>
+                  <li class="option">b) No </li>
                 </ul>
-                <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                    <strong>Answer:</strong> a) Yes
-                </div>
               </div>
 
               <br> <!-- Spacing between the QA pairs -->
@@ -890,12 +850,9 @@
                 <h4>Plasticity</h4>
                 <p>Is the <u><strong>plasticity</strong></u> of the <strong><span style="color: red;">red ball</span></strong> much less than the <strong><span style="color: rgb(0, 110, 255);">blue ball</span></strong>?</p>
                 <ul style="list-style-type: none; padding-left: 0;">
-                    <li>a) Yes</li>
-                    <li>b) No</li>
+                  <li class="option">a) Yes </li>
+                  <li class="option checked">b) No </li>
                 </ul>
-                <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                    <strong>Answer:</strong> b) No
-                </div>
               </div>
 
               </div>
@@ -904,21 +861,19 @@
     
             <!-- Matting. -->
             <div class="column">
-              <h2 class="title is-3">Dynamics Questions</h2>
+              <h2 class="title is-4">Dynamics Questions</h2>
               <div class="columns is-centered">
                 <div class="column content"  style="font-size: 1.0em;">
                   <!-- First QA Pair -->
                   <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Temporal Predictive Question</h4>
                     <p>Which pit will the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> finally drop into?</p>
+
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) The left pit</li>
-                        <li>b) The right pit</li>
-                        <li>c) It will not drop into any pits</li>
+                      <li class="option checked">a) The left pit                   </li>
+                      <li class="option">b) The right pit                  </li>
+                      <li class="option">c) It will not drop into any pits </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> a) The left pit
-                    </div>
                   </div>
 
                   <br> <!-- Spacing between the QA pairs -->
@@ -928,13 +883,10 @@
                     <h4>Counterfactual Question</h4>
                     <p>If we removed the <strong><span style="color: rgb(35, 219, 219);">cyan floating wall</span></strong> and other balls, which pit would the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> drop into?</p>
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) The left pit</li>
-                        <li>b) The right pit</li>
-                        <li>c) None of the above</li>
+                      <li class="option">a) The left pit                   </li>
+                      <li class="option checked">b) The right pit                  </li>
+                      <li class="option">c) None of the above </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> b) The right pit
-                    </div>
                   </div>
 
                   <br> <!-- Spacing between the QA pairs -->
@@ -943,14 +895,12 @@
                   <div style="border: 1px solid #ccc; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <h4>Goal-Driven Question</h4>
                     <p>What can we do to let the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> drop into the right pit?</p>
+
                     <ul style="list-style-type: none; padding-left: 0;">
-                        <li>a) Remove the <strong><span style="color: rgb(35, 219, 219);">cyan floating wall</span></strong> and other balls</li>
-                        <li>b) Remove the <strong><span style="color: purple;">purple floating wall</span></strong> and other balls</li>
-                        <li>c) None of the above works</li>
+                      <li class="option checked">a) Remove the <strong><span style="color: rgb(35, 219, 219);">cyan floating wall</span></strong> and other balls </li>
+                      <li class="option checked">b) Remove the <strong><span style="color: purple;">purple floating wall</span></strong> and other balls          </li>
+                      <li class="option">c) None of the above works                                                                                          </li>
                     </ul>
-                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
-                        <strong>Answer:</strong> a) and b)
-                    </div>
                   </div>
 
                 </div>
@@ -993,6 +943,58 @@
     </div>
   
     <!--/ Ball. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="columns is-vcentered">
+          <div class="column is-12 has-text-centered">
+            <img src="static/images/experiments.png" alt="experiments" class="showcase-qa">
+          </div>
+        </div>
+        <h2 class="content has-text-justified">
+          Physical reasoning on SOPHY. We list all question families, <strong>Prop</strong>erty, <strong>Counter</strong>factual,
+          <strong>Goal</strong>-driven and <strong>Pred</strong>ictive questions. Accuracies are reported with per option and per question.
+        </h2>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Question Distribution</h2>
+        <div class="columns is-vcentered">
+          <div class="column is-12 has-text-centered">
+            <img src="static/images/distr1.png" alt="distribution" class="showcase-qa">
+          </div>
+        </div>
+        <h2 class="content has-text-justified">
+          Question distribution statistics of fluid, rope, cloth and ball.
+        </h2>
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Details</h2>
+        <div class="columns is-vcentered">
+          <div class="column is-12 has-text-centered">
+            <div class="item item-fullbody">
+              <video poster="Loading..." id="fullbody"  controls muted loop playsinline height="100%">
+                <source src="./static/videos/teasers/sensors.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+        <h2 class="content has-text-justified">
+          Sensor data outputs are multimodal, depicting the 4D states of objects across various levels,
+ranging from object-level, point-level to event-level.
+        </h2>
+      </div>
+    </div>
   </div>
 </section>
 
