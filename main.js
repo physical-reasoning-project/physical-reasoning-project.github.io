@@ -16,20 +16,34 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-const videoContainer = document.querySelector('.video-container');
-const content = document.querySelector('.content');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const video = document.getElementById('floatingVideo');
+//     const content1 = document.getElementById('content1');
 
-window.addEventListener('scroll', function() {
-    // Define the height region where the video should start and stop being fixed
-    const startFixedPosition = content.offsetTop + 100; // Adjust as needed
-    const endFixedPosition = content.offsetTop + content.offsetHeight - 300; // Adjust as needed
+//     function isElementInViewport(el) {
+//         const rect = el.getBoundingClientRect();
+//         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+//         const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+//         const yOffset = 0.9* viewportHeight; // 10% 的裕量
+//         const xOffset = 0.9 * viewportWidth;  // 10% 的裕量
 
-    if (window.scrollY > startFixedPosition && window.scrollY < endFixedPosition) {
-        videoContainer.classList.add('fixed-video');
-    } else {
-        videoContainer.classList.remove('fixed-video');
-    }
-});
+//         return (
+//             rect.top + yOffset <= viewportHeight &&
+//             rect.left + xOffset <= viewportWidth &&
+//             rect.bottom - yOffset >= 0 &&
+//             rect.right - xOffset >= 0
+//         );
+//     }
+
+//     window.addEventListener('scroll', function() {
+//         if (isElementInViewport(content1)) {
+//             video.style.display = 'block';
+//         } else {
+//             video.style.display = 'none';
+//         }
+//     });
+// });
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     let video1 = document.getElementById("video1");
