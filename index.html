@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SoftPhy: Soft-Body Physical Concept Learning and Reasoning from Videos">
+  <meta name="keywords" content="Neuro-symbolic Visual Reasoning, Physical Reasoning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoftPhy: Soft-Body Physical Concept Learning and Reasoning from Videos</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SoftPhy: </h1><h1 class="title is-2 has-text-centered">Soft-Body Physical Concept Learning and Reasoning from Videos</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous authors
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Under review at ICLR 2024
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <!-- Intro. -->
+        <div class="columns is-centered">
+          <div class="content has-text-justified">
+            <h2 class="title is-3">Menu</h2>
+            <p></p> 
+          </div>
+        </div>
+        <!-- <div class="exampletoggle">
+            <div id="show1" onmouseover="showexample(1)" class="active">Example 1</div>
+            <div id="show2" onmouseover="showexample(2)">Example 2</div>
+            <div id="show3" onmouseover="showexample(3)">Example 3</div>
+        </div> -->
+      
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-6 has-text-centered has-text-weight-bold">
+            <a href="#content1">
+              <video id="video1" autoplay muted loop playsinline height="100%"  class="interpolation-image">
+                <source src="./static/videos/fluid/fluid_2_teaser.mp4"
+                        type="video/mp4">
+              </video>
+              <!-- <img src="static/gifs/fluid_2.gif" alt="GIF 1" class="interpolation-image" data-id="1"> -->
+              <p>Fluid Hourglass</p>
+            </a>
+          </div>
+          <div class="column is-6 has-text-centered has-text-weight-bold">
+            <a href="#content2">
+              <video id="video2" autoplay muted loop playsinline height="100%"  class="interpolation-image">
+                <source src="static/videos/rope/rope_1_0_teaser.mp4"
+                        type="video/mp4">
+              </video>
+              <!-- <img src="static/videos/rope/rope_1_0.mp4" alt="GIF 2" class="interpolation-image" data-id="2"> -->
+              <p class="is-bold">Rope-Pulley System</p>
+            </a>
+          </div>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+          <div class="column is-6 has-text-centered has-text-weight-bold">
+            <a href="#content3">
+              <video id="video3" autoplay muted loop playsinline height="100%" class="interpolation-image">
+                <source src="static/videos/cloth/cloth_9_teaser.mp4"
+                        type="video/mp4">
+              </video>
+              <!-- <img src="static/videos/cloth/cloth_9.mp4" alt="GIF 3" class="interpolation-image" data-id="3"> -->
+              <p>Cloth Magic Trick</p>
+            </a>
+          </div>
+          <div class="column is-6 has-text-centered has-text-weight-bold">
+            <a href="#content4">
+              <video id="video4" autoplay muted loop playsinline height="100%" class="interpolation-image">
+                <source src="static/videos/ball/ball_14_teaser.mp4"
+                        type="video/mp4">
+              </video>
+              <!-- <img src="static/videos/ball/ball_14.mp4" alt="GIF 4" class="interpolation-image" data-id="4"> -->
+              <p class="is-bold">Ball Playground</p>
+            </a>
+          </div>
+        </div>
+        
+        <!-- <div class="gif-grid">
+          <img src="C:/Users/87242/Downloads/output_Full (9).gif" alt="GIF 1" class="gif" data-id="1">
+          <img src="C:/Users/87242/Downloads/p1 (2).gif" alt="GIF 2" class="gif" data-id="2">
+          <img src="C:/Users/87242/Downloads/output_Full (6).gif" alt="GIF 3" class="gif" data-id="3">
+          <img src="C:/Users/87242/Downloads/output_Full (8).gif" alt="GIF 4" class="gif" data-id="4">
+        </div> -->
+
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2> -->
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce the <strong><u>Soft-Body Physical Dataset (SOPHY)</u></strong>, a novel benchmark for
+            evaluating machine models in <strong>physical reasoning across diverse scenarios for
+              soft bodies</strong>.
+          </p>
+          <p>
+            The SOPHY is specifically designed to be complementary with
+            existing physical reasoning benchmarks by <strong>encompassing diverse physical property
+            inferences</strong> for soft bodies like physical parameters such as mass and density across
+            dynamic situations and <strong>predicting corresponding dynamics</strong>. This comprehensive
+            dataset enables the development and assessment of AI models with human-like
+            visual reasoning abilities in understanding both rigid objects and soft objects' visual
+            attributes, physical properties, and dynamics while devising goal-oriented solutions.
+            We evaluated a range of AI models and found that they still struggle to achieve
+            satisfactory performance, which shows that current AI models still lack physical
+            commonsense for soft objects and illustrates the value of the proposed dataset. 
+          </p>
+          <p>
+            We hope the <span class="dnerf">SOPHY</span> fosters advancements in AI perception and reasoning in diverse
+            physical environments, bridging the gap between human and machine intelligence
+            in the physical world.
+          </p>
+        </div>
+        <br/>
+        <h2 class="title is-3">Motivation</h2>
+        <div class="columns is-vcentered">
+          <div class="column is-12 has-text-centered">
+            <img src="static/images/teaser.png" alt="teaser" class="showcase-qa">
+          </div>
+        </div>
+        <h2 class="content has-text-justified">
+          <strong>The motivation is derived from a range of everyday soft materials, whose physical behaviors
+          or functions vary because of their diverse physical properties.</strong> a) Gasoline flows more fluently than
+          glue due to lower viscosity, while oil with lower density tends to float above water. b) Poplin and
+          canvas exhibit surface wrinkles with varying granularity due to their distinct bending compliance.
+          c) The lifting approach requires less force due to the re-distributed tensile forces facilitated by the
+          movable pulley. d) Trajectories of tennis ball and dough ball demonstrate their differing elasticity and
+          plasticity.
+        </h2>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Fluid. -->
+    <div id="content1" class="content-section">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2"><img src="static/images/fluid.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Fluid Hourglass</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this device, various liquids of different densities, each represented by distinct
+              colors, are released from corresponding emitters situated at the uppermost part of the apparatus.
+              Under the influence of gravity, these liquids descend and traverse a series of fixed ramps (resembling
+              sticks) positioned in the central region of the device. This arrangement causes alterations in their
+              flow direction. Ultimately, the liquids are funneled into containers at the bottom, each container
+              designated by a unique color. This process highlights distinctive behaviors arising from the interaction
+              of multiple fluids, attributable to their significantly varied densities. Our research is oriented towards
+              formulating inquiries pertaining to the physical properties of these liquids and the dynamic trajectories
+              they exhibit.
+            </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-12 has-text-centered">
+              <video id="video_case_1" autoplay controls muted loop playsinline height="100%" class="showcase-video">
+                <source src="./static/videos/fluid/fluid_2_case.mp4"
+                        type="video/mp4">
+              </video>
+              <!-- add questions here -->
+            </div>
+          </div>
+          <!--/ Interpolating. -->
+
+          <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+          <div class="content has-text-justified">
+            <p>
+              Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+              viewpoint such as a stabilized camera by playing back the training deformations.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="75%">
+              <source src="./static/videos/replay.mp4"
+                      type="video/mp4">
+            </video>
+          </div> -->
+
+        </div>
+      </div>
+      <div class="columns is-vcentered">
+        <div class="column is-12 has-text-left">
+          <!-- add questions here -->
+
+          <div class="columns is-centered">
+            <!-- Visual Effects. -->
+            <div class="column">
+              <div class="content" style="font-size: 1.0em;">
+                <h3 class="title is-3">Physical Property Questions</h3>
+                
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                  <h4>Question:</h4>
+                  <p>Is the <u><strong>density</strong></u> of the <strong><span style="color: orange;">orange fluid</span></strong> greater than that of the <strong><span style="color: rgb(4, 150, 4);">green fluid</span></strong>?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                      <li>a) Yes</li>
+                      <li>b) No</li>
+                      <li>c) Cannot Judge</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> a) Yes
+                  </div>
+                </div>
+
+                <br> <!-- Spacing between the two QA pairs -->
+
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                  <h4>Question:</h4>
+                  <p>Is the <u><strong>density</strong></u> of the <strong><span style="color: pink;">pink fluid</span></strong> less than that of the <strong><span style="color: orange;">orange fluid</span></strong>?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                      <li>a) Yes</li>
+                      <li>b) No</li>
+                      <li>c) Cannot Judge</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> c) Cannot Judge
+                  </div>
+              </div>
+
+              </div>
+            </div>
+            <!--/ Visual Effects. -->
+      
+            <!-- Matting. -->
+            <div class="column">
+              <h2 class="title is-3">Dynamics Questions</h2>
+              <div class="columns is-centered">
+                <div class="column content"  style="font-size: 1.0em;">
+                  <!-- First QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>Will most fluid from the <strong><span style="color: rgb(4, 150, 4);">other green emitter</span></strong> pass the <strong><span style="color: red;">red stick</span></strong>?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Yes</li>
+                        <li>b) No</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> b) No
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the two QA pairs -->
+
+                  <!-- Second QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                    <h4>Question:</h4>
+                    <p>If the <strong><span style="color: red;">red stick</span></strong> were removed, would most <strong><span style="color: orange;">orange fluid</span></strong> flow into the <strong><span style="color: rgb(35, 219, 219);">cyan container</span></strong>?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Yes</li>
+                        <li>b) No</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> a) Yes
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the two QA pairs -->
+
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                    <h4>Question:</h4>
+                    <p>What can we do to guide most of the <strong><span style="color: orange;">orange fluid</span></strong> into the <strong><span style="color: rgb(35, 219, 219);">cyan container</span></strong>?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Remove the <strong><span style="color: red;">red stick</span></strong></li>
+                        <li>b) Remove the <strong><span style="color: orange;">orange stick</span></strong></li>
+                        <li>c) Remove the <strong><span style="color: rgb(0, 110, 255);">blue stick</span></strong></li>
+                        <li>d) Remove the <strong><span style="color: gray;">gray stick</span></strong></li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> a) Remove the red stick
+                    </div>
+                  </div>
+                
+
+                </div>
+      
+              </div>
+            </div>
+          </div>
+          <!--/ Matting. -->
+
+        <div class="container">
+          <h2 class="title is-3">More Samples</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-steve">
+              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/fluid/fluid_0.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-chair-tp">
+              <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/fluid/fluid_1.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-shiba">
+              <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/fluid/fluid_5.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-fullbody">
+              <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/fluid/fluid_12.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      <br/>
+      <br/>
+    </div>
+    <!--/ Fluid. -->
+
+
+    <!-- Rope. -->
+    <div id="content2" class="content-section">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2"><img src="static/images/rope.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Rope-Pulley System</h2>
+          <div class="content has-text-justified">
+            <p>
+              An array of pulleys, including both movable and
+              fixed types, along with anchor points, is arranged on a wall. Ropes are configured with their ends
+              connected to pulleys, loads, or anchor points, and can be wound around the pulleys. These loads
+              possess varying masses, interacting with other forces in the system, leading to the emergence of
+              distinct motion patterns. The primary objective of the model is to identify the tension distributions
+              within this elementary rope system. Additionally, it is tasked with recognizing potential correlations
+              or constraints among objects in motion, such as the coordinated movement of loads and the rotation
+              of pulleys on a single rope. Moreover, the model is expected to infer numerical relationships between
+              the loads' masses and predict whether the ropes will detach from or remain attached to certain pulleys.
+            </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-12 has-text-centered">
+              <video id="video_case_1" autoplay controls muted loop playsinline height="100%" class="showcase-video">
+                <source src="./static/videos/rope/rope_14_case.mp4"
+                        type="video/mp4">
+              </video>
+              <!-- add questions here -->
+            </div>
+          </div>
+          <!--/ Interpolating. -->
+
+          <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+          <div class="content has-text-justified">
+            <p>
+              Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+              viewpoint such as a stabilized camera by playing back the training deformations.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="75%">
+              <source src="./static/videos/replay.mp4"
+                      type="video/mp4">
+            </video>
+          </div> -->
+
+        </div>
+      </div>
+      <div class="columns is-vcentered">
+        <div class="column is-12 has-text-left">
+          <!-- add questions here -->
+
+          <div class="columns is-centered">
+            <!-- Visual Effects. -->
+            <div class="column">
+              <div class="content"  style="font-size: 1.0em;">
+                <h3 class="title is-3">Physical Property Questions</h3>
+                <!-- First QA Pair -->
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); ">
+                  <h4>Question:</h4>
+                  <p>Is the <u><strong>mass</strong></u> of the <strong><span style="color: purple;">purple cube</span></strong> greater than <strong>twice</strong> that of the <strong><span style="color: brown;">brown cube</span></strong>?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                      <li>a) Yes</li>
+                      <li>b) No</li>
+                      <li>c) Cannot Judge</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> b) No
+                  </div>
+                </div>
+
+                <br> <!-- Spacing between the QA pairs -->
+
+                <!-- Second QA Pair -->
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <h4>Question:</h4>
+                  <p>Is the <u><strong>mass</strong></u> of the <strong>sphere</strong> less than that of the <strong><span style="color: brown;">brown cube</span></strong>?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                      <li>a) Yes</li>
+                      <li>b) No</li>
+                      <li>c) Cannot Judge</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> c) Cannot Judge
+                  </div>
+                </div>
+
+                <br> <!-- Spacing between the QA pairs -->
+
+                <!-- Third QA Pair -->
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8prgb(35, 219, 219)x rgba(0,0,0,0.1);">
+                  <h4>Question:</h4>
+                  <p>Is the <u><strong>tension</strong></u> in the <strong><span style="color: black;">black rope</span></strong> approximately equal to half that in the <strong><span style="color: red;">red rope</span></strong> (i.e. the short rope linking purple cube)?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                      <li>a) Yes</li>
+                      <li>b) No</li>
+                      <li>c) Cannot Judge</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> a) Yes
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/ Visual Effects. -->
+      
+            <!-- Matting. -->
+            <div class="column">
+              <h2 class="title is-3">Dynamics Questions</h2>
+              <div class="columns is-centered">
+                <div class="column content"  style="font-size: 1.0em;">
+                  <!-- Fourth QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>If the <strong><span style="color: purple;">purple cube</span></strong> were far much heavier, which direction would the <strong><span style="color: rgb(0, 110, 255);">blue movable pulley</span></strong> rotate?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Anti-clockwise</li>
+                        <li>b) Clockwise</li>
+                        <li>c) Not affected</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> a) Anti-clockwise
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the QA pairs -->
+
+                  <!-- Fifth QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>What can we do to rotate the <strong><span style="color: rgb(0, 110, 255);">blue fixed pulley</span></strong> clockwise?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Decrease <strong><span style="color: gray;">gray cube</span></strong> mass</li>
+                        <li>b) Decrease <strong><span style="color: brown;">brown cube</span></strong> mass</li>
+                        <li>c) Increase sphere mass</li>
+                        <li>d) None of the above works</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> b) Decrease brown cube mass
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the QA pairs -->
+
+                  <!-- Sixth QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>What can we do to lift the <strong><span style="color: red;">red cube</span></strong> upwards?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Decrease <strong><span style="color: red;">red cube</span></strong> mass</li>
+                        <li>b) Increase <strong><span style="color: purple;">purple cube</span></strong> mass</li>
+                        <li>c) Increase sphere mass</li>
+                        <li>d) None of the above works</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> a) and c)
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+          <!--/ Matting. -->
+
+          <div class="container">
+          <h2 class="title is-3">More Samples</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-chair-tp">
+                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/rope/rope_11.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-shiba">
+                <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/rope/rope_48.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-fullbody">
+                <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/rope/rope_27.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-blueshirt">
+                <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/rope/rope_12.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-mask">
+                <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/rope/rope_17.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-toby">
+                <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/rope/rope_31.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-toby">
+                <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/rope/rope_1_0_teaser.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    <br/>
+    </br>
+    </div>
+    <!--/ Rope. -->
+
+
+    <!-- Cloth. -->
+    <div id="content3" class="content-section">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2"><img src="static/images/cloth.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Cloth Magic Trick</h2>
+          <div class="content has-text-justified">
+            <p>
+              A small table hosts an assortment of objects, including
+              pillars and plates of varying sizes, colors, and masses. Two square pieces of cloth, each possessing
+              distinct stretching, bending characteristics, and frictional properties, are gripped at one edge and
+              moved forward to cover these objects, causing possible collision events. Cloths are then promptly
+              released. The fabric obstructs the view of the objects but also delineates their shapes through its
+              deformable surface. Objects may topple over if they exceed a certain height or have low mass,
+              resulting in observable changes in the fabric's dynamic 3D surface geometry. This scenario serves as
+              a test for a model's capacity to discern the physical attributes of the fabrics and to predict the spatial
+              behavior of the concealed objects in dynamic situations.
+            </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-12 has-text-centered">
+              <video id="video_case_1" autoplay controls muted loop playsinline height="100%" class="showcase-video">
+                <source src="./static/videos/cloth/cloth_9_case.mp4"
+                        type="video/mp4">
+              </video>
+              <!-- add questions here -->
+            </div>
+          </div>
+          <!-- <div class="columns is-vcentered">
+            <div class="column is-12 has-text-centered">
+              <img src="static/images/fluid_qa.png" alt="fluid_qa" class="showcase-qa">
+            </div>
+          </div>
+          <br/> -->
+          <!--/ Interpolating. -->
+
+          <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+          <div class="content has-text-justified">
+            <p>
+              Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+              viewpoint such as a stabilized camera by playing back the training deformations.
+            </p>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                  controls
+                  muted
+                  preload
+                  playsinline
+                  width="75%">
+              <source src="./static/videos/replay.mp4"
+                      type="video/mp4">
+            </video>
+          </div> -->
+
+        </div>
+      </div>
+      <div class="columns is-vcentered">
+        <div class="column is-12 has-text-left">
+          <!-- add questions here -->
+
+          <div class="columns is-centered">
+            <!-- Visual Effects. -->
+            <div class="column">
+              <div class="content"  style="font-size: 1.0em;">
+                <h3 class="title is-3">Physical Property Questions</h3>
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <h4>Question:</h4>
+                  <p>Is the <strong>left cloth</strong> much easier to <u><strong>bend or have wrinkles</strong></u> than the other?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                    <li>a) Yes</li>
+                    <li>b) No</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> b) No
+                  </div>
+                </div>  
+
+                <br>
+                
+                <!-- First QA Pair -->
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <h4>Question:</h4>
+                  <p>Is the <u><strong>elasticity</strong></u> of the <strong>right cloth</strong> much greater than that of the other?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                      <li>a) Yes</li>
+                      <li>b) No</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> a) Yes
+                  </div>
+                </div>
+
+                <br> <!-- Spacing between the two QA pairs -->
+
+                <!-- Second QA Pair -->
+                <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                  <h4>Question:</h4>
+                  <p>Is the <u><strong>friction</strong></u> on the <strong>right cloth</strong> much greater than the other?</p>
+                  <ul style="list-style-type: none; padding-left: 0;">
+                      <li>a) Yes</li>
+                      <li>b) No</li>
+                  </ul>
+                  <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                      <strong>Answer:</strong> a) Yes
+                  </div>
+                </div>
+
+
+
+
+              </div>
+            </div>
+            <!--/ Visual Effects. -->
+      
+            <!-- Matting. -->
+            <div class="column">
+              <h2 class="title is-3">Dynamics Questions</h2>
+              <div class="columns is-centered">
+                <div class="column content"  style="font-size: 1.0em;">
+
+                  <!-- First QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>Does the <strong><span style="background-color: rgb(165, 165, 165); color: white;">white pillar</span></strong> collide with the <strong><span style="background-color: rgb(165, 165, 165); color: yellow;">yellow plate</span></strong>?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Yes</li>
+                        <li>b) No</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> a) Yes
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the QA pairs -->
+
+                  <!-- Second QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>Is the <strong><span style="background-color: rgb(165, 165, 165); color: yellow;">yellow plate</span></strong> finally in touch with the <strong><span style="background-color: rgb(165, 165, 165); color: white;">white pillar</span></strong>?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Yes</li>
+                        <li>b) No</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> b) No
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the QA pairs -->
+
+                  <!-- Third QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>Which phrase below can best describe the final pose of the <strong><span style="color: brown;">brown pillar</span></strong>?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Standing upright</li>
+                        <li>b) Leaning</li>
+                        <li>c) Lying horizontally</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> b) Leaning
+                    </div>
+                  </div>
+
+
+                </div>
+      
+              </div>
+            </div>
+          </div>
+          <!--/ Matting. -->
+
+          <div class="container">
+          <h2 class="title is-3">More Samples</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-steve">
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/cloth/cloth_0.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-chair-tp">
+                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/cloth/cloth_1.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-shiba">
+                <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/cloth/cloth_4.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-fullbody">
+                <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/cloth/cloth_14.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    <br/>
+    </br>
+    </div>
+    <!--/ Cloth. -->
+
+
+    <!-- Ball. -->
+    <div id="content4" class="content-section">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2"><img src="static/images/ball.png" alt="Icon" style="height: 48px; vertical-align: middle; margin-right: 8px;">Ball Playground</h2>
+          <div class="content has-text-justified">
+            <p>
+              A playground contains obstacles of different color,
+              and pose, along with pits randomly arranged within. Soft balls with varying deformation resistance
+              or plasticity yield are launched randomly within the space, with varying initial positions. These
+              balls undergo a sequence of dynamic movements, including bouncing and permanent deformation.
+              Ultimately, some may collide with obstacles and fall into pits. This experimental scenario serves as a
+              test to determine whether the model can accurately discern the elasticity and plasticity properties of
+              the soft bodies. It also assesses the model's ability to make dynamic predictions and inferences based
+              on these attributes during interactions between objects.
+            </p>
+          </div>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-12 has-text-centered">
+              <video id="video_case_1" autoplay controls muted loop playsinline height="100%" class="showcase-video">
+                <source src="./static/videos/ball/ball_14_case.mp4" type="video/mp4">
+              </video>
+              <!-- add questions here -->
+            </div>
+          </div>
+          <!-- <div class="columns is-vcentered">
+                <div class="column is-12 has-text-centered">
+                  <img src="static/images/fluid_qa.png" alt="fluid_qa" class="showcase-qa">
+                </div>
+              </div>
+              <br/> -->
+          <!--/ Interpolating. -->
+    
+          <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+              <div class="content has-text-justified">
+                <p>
+                  Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+                  viewpoint such as a stabilized camera by playing back the training deformations.
+                </p>
+              </div>
+              <div class="content has-text-centered">
+                <video id="replay-video"
+                      controls
+                      muted
+                      preload
+                      playsinline
+                      width="75%">
+                  <source src="./static/videos/replay.mp4"
+                          type="video/mp4">
+                </video>
+              </div> -->
+    
+        </div>
+      </div>
+      <div class="columns is-vcentered">
+        <div class="column is-12 has-text-left">
+          <!-- add questions here -->
+    
+          <div class="columns is-centered">
+            <!-- Visual Effects. -->
+            <div class="column">
+              <div class="content"  style="font-size: 1.0em;">
+                <h3 class="title is-3">Physical Property Questions</h3>
+               <!-- First QA Pair -->
+              <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <h4>Question:</h4>
+                <p>Is the <u><strong>deformation resistance</strong></u> of the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> much less than the <strong><span style="color: rgb(0, 110, 255);">blue ball</span></strong>?</p>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li>a) Yes</li>
+                    <li>b) No</li>
+                </ul>
+                <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                    <strong>Answer:</strong> a) Yes
+                </div>
+              </div>
+
+              <br> <!-- Spacing between the QA pairs -->
+
+              <!-- Second QA Pair -->
+              <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <h4>Question:</h4>
+                <p>Is the <u><strong>plasticity</strong></u> of the <strong><span style="color: red;">red ball</span></strong> much less than the <strong><span style="color: rgb(0, 110, 255);">blue ball</span></strong>?</p>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li>a) Yes</li>
+                    <li>b) No</li>
+                </ul>
+                <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                    <strong>Answer:</strong> b) No
+                </div>
+              </div>
+
+              </div>
+            </div>
+            <!--/ Visual Effects. -->
+    
+            <!-- Matting. -->
+            <div class="column">
+              <h2 class="title is-3">Dynamics Questions</h2>
+              <div class="columns is-centered">
+                <div class="column content"  style="font-size: 1.0em;">
+                  <!-- First QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>Which pit will the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> finally drop into?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) The left pit</li>
+                        <li>b) The right pit</li>
+                        <li>c) It will not drop into any pits</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> a) The left pit
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the QA pairs -->
+
+                  <!-- Second QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>If we removed the <strong><span style="color: rgb(35, 219, 219);">cyan floating wall</span></strong> and other balls, which pit would the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> drop into?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) The left pit</li>
+                        <li>b) The right pit</li>
+                        <li>c) None of the above</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> b) The right pit
+                    </div>
+                  </div>
+
+                  <br> <!-- Spacing between the QA pairs -->
+
+                  <!-- Third QA Pair -->
+                  <div style="border: 1px solid #ccc; padding: 20px; width: 400px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <h4>Question:</h4>
+                    <p>What can we do to let the <strong><span style="color: rgb(35, 219, 219);">cyan ball</span></strong> drop into the right pit?</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li>a) Remove the <strong><span style="color: rgb(35, 219, 219);">cyan floating wall</span></strong> and other balls</li>
+                        <li>b) Remove the <strong><span style="color: purple;">purple floating wall</span></strong> and other balls</li>
+                        <li>c) None of the above works</li>
+                    </ul>
+                    <div style="background-color: #f7f7f7; padding: 10px; border-top: 1px solid #eaeaea; margin-top: 10px;">
+                        <strong>Answer:</strong> a) and b)
+                    </div>
+                  </div>
+
+                </div>
+    
+              </div>
+            </div>
+          </div>
+          <!--/ Matting. -->
+    
+          <div class="container">
+            <h2 class="title is-3">More Samples</h2>
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-steve">
+                <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ball/ball_0.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-chair-tp">
+                <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ball/ball_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-shiba">
+                <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ball/ball_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-fullbody">
+                <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+                  <source src="./static/videos/ball/ball_6.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    <br/>
+    </br>
+    </div>
+  
+    <!--/ Ball. -->
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/---.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/---" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This paper is under review at <a
+            href="https://iclr.cc/Conferences/2024">ICLR 2024</a>.
+          </p>
+          <p>
+            Licensed under <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. Template borrowed from <a
+            href="https://github.com/nerfies/nerfies.github.io">here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("a[href^='#']").on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top
+          }, 400);
+        }
+      });
+    });
+    </script>
+  <a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
+</body>
+</html>
