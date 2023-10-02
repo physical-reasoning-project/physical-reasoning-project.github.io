@@ -129,7 +129,8 @@ body {
 
 
 .interpolation-panel {
-  background: #d4f1ff82;
+  background: #d0d0d02a;
+  border-radius: 10px;
 }
 
 .interpolation-panel .interpolation-image {
@@ -316,7 +317,36 @@ body {
   border: 2px solid #0080ff;
   padding: 10px;
   width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   font-size: 0.8em
+}
+
+#content1 .card {
+  border: 2px solid #ffd000;
+}
+#content1 .interpolation-panel {
+  background: #fdfcdb82;
+  border-radius: 20px;
+}
+#content2 .card {
+  border: 2px solid #339efb;
+}
+#content2 .interpolation-panel {
+  background: #d1e5f982;
+  border-radius: 20px;
+}
+#content3 .card {
+  border: 2px solid #fe2e73;
+}
+#content3 .interpolation-panel {
+  background: #ffddee82;
+  border-radius: 20px;
+}
+#content4 .card {
+  border: 2px solid #00ffcc;
+}
+#content4 .interpolation-panel {
+  background: #d5fce982;
+  border-radius: 20px;
 }
