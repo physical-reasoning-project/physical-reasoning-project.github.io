@@ -241,3 +241,15 @@ body {
 #back-to-top:hover {
   background-color: #e9ebec;
 }
+
+.cute-box {
+  padding: 10px 20px;     /* Space around the text inside the box */
+  background-color: pink; /* Color of the box */
+  border: 2px solid purple; /* Border around the box */
+  border-radius: 5px;    /* Rounded corners */
+  font-size: 16px;       /* Font size of the text */
+  font-weight: bold;     /* Makes the text bold */
+  text-align: center;    /* Centers the text horizontally */
+  max-width: 200px;      /* Maximum width of the box */
+  margin: 20px auto;     /* Centers the box horizontally on the page */
+}
