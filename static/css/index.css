@@ -299,7 +299,7 @@ body {
   text-decoration: none;
 }
 body {
-  background-image: url("../images/bg4.png");
+  background-image: url("../images/bg4.jpg");
   background-size: 1800px;
   background-position: top center;
   background-repeat:no-repeat;
@@ -349,4 +349,9 @@ body {
 #content4 .interpolation-panel {
   background: #d5fce982;
   border-radius: 20px;
+}
+
+video {
+  width: 100%;  
+  height: auto; 
 }
