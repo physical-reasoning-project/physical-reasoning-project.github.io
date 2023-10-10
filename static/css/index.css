@@ -355,3 +355,10 @@ video {
   width: 100%;  
   height: auto; 
 }
+
+.drop-cap::first-letter {
+  float: left;
+  font-size: 3em; /* Adjust as needed */
+  line-height: 1; /* Adjust for vertical alignment */
+  padding-right: 8px; /* Spacing from the next letter */
+}
