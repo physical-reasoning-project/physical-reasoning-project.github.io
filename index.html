@@ -67,6 +67,7 @@
   <a href="#content3"><strong><span style="color: rgb(0, 0, 0);">Cloth</span></strong></a>
   <a href="#content4"><strong><span style="color: rgb(0, 0, 0);">Ball</span></strong></a>
   <a href="#content7">Experiments</a>
+  <a href="#content10"><strong><span style="color: rgb(191, 91, 108);">SoPRO</span></strong></a>
   <a href="#content8">Statistics</a>
   <a href="#content9">Details</a>
 </nav>
@@ -891,6 +892,32 @@
       </div>
       
     </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div id="content10">
+          <br/>
+          <br/>
+          <br/>
+          <h2 class="title is-2">Our Oracle Model: <span style="color: rgb(191, 91, 108);">SoPRO</span></h2>
+          <div class="columns is-vcentered">
+            <div class="column is-6 has-text-centered">
+              <img src="static/images/SoPRO.png" alt="distribution" class="showcase-qa">
+            </div>
+            <div class="column is-5 has-text-centered">
+              <h2 class="content has-text-justified">
+                <p>We introduce <strong>So</strong>ft-Body <strong>P</strong>hysical <strong>R</strong>easoning <strong>O</strong>racle Model, <strong>SoPRO</strong>, which marries physics-based
+                dynamics models with the recent large language models which enjoy the advantages of both models, precise dynamic predictions, and interpretable reasoning.</p>
+                <br>
+                <p> The figure shows the model architecture for SoPRO. With specific
+                  prompts and questions, code LLM will generate Python code for physical reasoning. Differentiable
+                  Physics-based Predictor will predict dynamics in the scenario with 3D point cloud input (as an <strong>oracle</strong> input). Code
+                  Execution Module utilizes physical APIs as well as physical rules to output answers directly.</p>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--/ Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-9">
@@ -901,7 +928,7 @@
           <h2 class="title is-2">Question Distribution</h2>
           <div class="columns is-vcentered">
             <div class="column is-12 has-text-centered">
-              <img src="static/images/distr1.png" alt="distribution" class="showcase-qa">
+              <img src="static/images/pie.png" alt="distribution" class="showcase-qa">
             </div>
           </div>
           <h2 class="content has-text-centered">
