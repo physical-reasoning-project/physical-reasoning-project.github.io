@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="SoftPhy: Soft-Body Physical Concept Learning and Reasoning from Videos">
+        content="ContPhy: Continuum Physical Concept Learning and Reasoning from Videos">
   <meta name="keywords" content="Neuro-symbolic Visual Reasoning, Physical Reasoning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SoftPhy: Soft-Body Physical Concept Learning and Reasoning from Videos</title>
+  <title>ContPhy: Continuum Physical Concept Learning and Reasoning from Videos</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -38,7 +38,7 @@
             <br/>
             <br/>
             <br/>
-            <h1 class="title is-1 publication-title">SoftPhy: </h1><h1 class="title is-2 has-text-centered">Soft-Body Physical Concept Learning and Reasoning from Videos</h1>
+            <h1 class="title is-1 publication-title">ContPhy: </h1><h1 class="title is-2 has-text-centered">Continuum Physical Concept Learning and Reasoning from Videos</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 Anonymous authors
@@ -59,7 +59,7 @@
 </section>
 
 <nav id="navbar">
-  <a href="#content0"><span style="font-weight:bolder; color: rgb(191, 91, 108);">SoftPhy</span></a>
+  <a href="#content0"><span style="font-weight:bolder; color: rgb(191, 91, 108);">ContPhy</span></a>
   <a href="#content5">Abstract</a>
   <a href="#content6">Motivation</a>
   <a href="#content1"><strong><span style="color: rgb(0, 0, 0);">Fluid</span></strong></a>
@@ -67,7 +67,7 @@
   <a href="#content3"><strong><span style="color: rgb(0, 0, 0);">Cloth</span></strong></a>
   <a href="#content4"><strong><span style="color: rgb(0, 0, 0);">Ball</span></strong></a>
   <a href="#content7">Experiments</a>
-  <a href="#content10"><strong><span style="color: rgb(191, 91, 108);">SoPRO</span></strong></a>
+  <a href="#content10"><strong><span style="color: rgb(191, 91, 108);">ContPRO</span></strong></a>
   <a href="#content8">Statistics</a>
   <a href="#content9">Details</a>
 </nav>
@@ -78,6 +78,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-widescreen">
           <!-- Intro. -->
+              <h4 class="title is-3"><span style="color: rgb(255, 37, 37); background-color: rgb(240, 237, 237);">Rebuttal Update:<br> a. Added our oracle model ContPRO as an oracle solution. </span></h4> 
               <h2 class="title is-3">Menu</h2> 
               <h4 class="title is-5"><span style="color: rgb(192, 101, 116);">Video loading may take a few seconds for the first time. Thanks for your patience!</span></h4> 
           <!-- <div class="exampletoggle">
@@ -174,13 +175,13 @@
 
           <div class="content has-text-justified">
             <p class="content has-text-centered"> <span style="font-size: 24px;color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-              We introduce the Soft-Body Physical Dataset <strong>(SOPHY)</strong>, a novel benchmark for
+              We introduce the <strong>Cont</strong>inuum <strong>Phy</strong>sical Dataset <strong>(ContPhy)</strong>, a novel benchmark for
               evaluating machine models in physical reasoning across diverse scenarios for
                 soft bodies.
               </span>
             </p>
             <p><br>
-              The SOPHY is specifically designed to be complementary with
+              The ContPhy is specifically designed to be complementary with
               existing physical reasoning benchmarks by <strong>encompassing diverse physical property
               inferences</strong> for soft bodies like physical parameters such as mass and density across
               dynamic situations and <strong>predicting corresponding dynamics</strong>. This comprehensive
@@ -192,7 +193,7 @@
               commonsense for soft objects and illustrates the value of the proposed dataset. 
             </p>
             <p>
-              We hope the <span class="dnerf">SOPHY</span> fosters advancements in AI perception and reasoning in diverse
+              We hope the <span class="dnerf">ContPhy</span> fosters advancements in AI perception and reasoning in diverse
               physical environments, bridging the gap between human and machine intelligence
               in the physical world.
             </p>
@@ -889,7 +890,7 @@
             </div>
           </div>
           <h2 class="content has-text-justified">
-            Comparison between baselines and human on SOPHY evaluation. We list some typical values among the results from various question families, <strong>Prop</strong>erty, <strong>Counter</strong>factual,
+            Comparison between baselines and human on ContPhy evaluation. We list some typical values among the results from various question families, <strong>Prop</strong>erty, <strong>Counter</strong>factual,
             <strong>Goal</strong>-driven and <strong>Pred</strong>ictive questions. Accuracies are reported with per <strong>opt</strong>ion and per <strong>ques</strong>tion.
           </h2>
         </div>
@@ -902,22 +903,22 @@
           <br/>
           <br/>
           <br/>
-          <h2 class="title is-2">Our Oracle Model: <span style="color: rgb(191, 91, 108);">SoPRO</span></h2>
+          <h2 class="title is-2">Our Oracle Model: <span style="color: rgb(191, 91, 108);">ContPRO</span></h2>
           <div class="columns is-vcentered">
             <div class="column is-7 has-text-centered">
-              <img src="static/images/SoPRO.png" alt="distribution" class="showcase-qa">
+              <img src="static/images/ContPRO.png" alt="distribution" class="showcase-qa">
             </div>
             <div class="column is-5 has-text-centered">
               <h2 class="content has-text-justified">
-                <p>We introduce <strong>So</strong>ft-Body <strong>P</strong>hysical <strong>R</strong>easoning <strong>O</strong>racle Model, <strong>SoPRO</strong>, which marries physics-based
+                <p>We introduce <strong>Cont</strong>inuum <strong>P</strong>hysical <strong>R</strong>easoning <strong>O</strong>racle Model, <strong>ContPRO</strong>, which marries physics-based
                 dynamics models with the recent large language models which enjoy the advantages of both models, precise dynamic predictions, and interpretable reasoning.</p>
                 <br>
-                <p> The figure shows the model architecture for SoPRO. With specific
+                <p> The figure shows the model architecture for ContPRO. With specific
                   prompts and questions, code LLM will generate Python code for physical reasoning. Differentiable
                   Physics-based Predictor will predict dynamics in the scenario with 3D point cloud input (as an <strong>oracle</strong> input). Code
                   Execution Module utilizes physical APIs as well as physical rules to output answers directly.</p>
-                <p>We evaluate SoPRO in the fluid scenario and analyze comprehensively. 
-                  The great performance of SoPRO-Oracle, with the initial input of 
+                <p>We evaluate ContPRO in the fluid scenario and analyze comprehensively. 
+                  The great performance of ContPRO-Oracle, with the initial input of 
                   cloud points that cannot be directly perceived in the real world, 
                   serves as a guide and oracle for future AI models.</p>
               </h2>
