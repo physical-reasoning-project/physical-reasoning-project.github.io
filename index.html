@@ -59,15 +59,15 @@
 </section>
 
 <nav id="navbar">
-  <a href="#content0"><span style="font-weight:bolder; color: rgb(191, 91, 108);">ContPhy</span></a>
+  <a href="#content0"><span style="font-weight:bolder; color: rgb(255, 106, 131);">ContPhy</span></a>
   <a href="#content5">Abstract</a>
   <a href="#content6">Motivation</a>
-  <a href="#content1"><strong><span style="color: rgb(0, 0, 0);">Fluid</span></strong></a>
-  <a href="#content2"><strong><span style="color: rgb(0, 0, 0);">Rope</span></strong></a>
-  <a href="#content3"><strong><span style="color: rgb(0, 0, 0);">Cloth</span></strong></a>
-  <a href="#content4"><strong><span style="color: rgb(0, 0, 0);">Ball</span></strong></a>
+  <a href="#content1">Fluid</a>
+  <a href="#content2">Rope</a>
+  <a href="#content3">Cloth</a>
+  <a href="#content4">Ball</a>
+  <a href="#content10"><strong><span style="color: rgb(255, 106, 131);">ContPRO</span></strong></a>
   <a href="#content7">Experiments</a>
-  <a href="#content10"><strong><span style="color: rgb(191, 91, 108);">ContPRO</span></strong></a>
   <a href="#content8">Statistics</a>
   <a href="#content9">Details</a>
 </nav>
@@ -76,9 +76,9 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
+        
         <div class="column is-full-widescreen">
           <!-- Intro. -->
-              <h4 class="title is-3"><span style="color: rgb(255, 37, 37); background-color: rgb(240, 237, 237);">Rebuttal Update:<br> a. Added our oracle model ContPRO as an oracle solution. </span></h4> 
               <h2 class="title is-3">Menu</h2> 
               <h4 class="title is-5"><span style="color: rgb(192, 101, 116);">Video loading may take a few seconds for the first time. Thanks for your patience!</span></h4> 
           <!-- <div class="exampletoggle">
@@ -164,40 +164,42 @@
           <br/>
           <br/>
           <h2 class="title is-3 has-text-centered">Abstract</h2>
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-10">
-              <video id="video3" autoplay muted loop playsinline height="100%", class="showcase-qa">
-                <source src="static/videos/teasers/dialogue.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
 
           <div class="content has-text-justified">
-            <p class="content has-text-centered"> <span style="font-size: 24px;color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <!-- <p class="content has-text-centered"> <span style="font-size: 24px;color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
               We introduce the <strong>Cont</strong>inuum <strong>Phy</strong>sical Dataset <strong>(ContPhy)</strong>, a novel benchmark for
               evaluating machine models in physical reasoning across diverse scenarios for
                 the continuum.
               </span>
-            </p>
-            <p><br>
+            </p> -->
+            <p><span style="font-size: 20px;color: rgb(58, 58, 58);font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              We introduce the <strong>Cont</strong>inuum <strong>Phy</strong>sical Dataset <strong>(ContPhy)</strong>, a novel benchmark for
+              evaluating machine models in physical reasoning across diverse scenarios for
+              the continuum.
               The ContPhy is specifically designed to be complementary with
-              existing physical reasoning benchmarks by <strong>encompassing diverse physical property
-              inferences</strong> for the physical parameters of the continuum such as mass and density across
-              dynamic situations and <strong>predicting corresponding dynamics</strong>. This
+              existing physical reasoning benchmarks by encompassing diverse <strong>physical property</strong>
+              inferences for the physical parameters of the continuum such as mass and density across
+              dynamic situations and predicting corresponding <strong>dynamics</strong>. This
               comprehensive dataset enables the development and assessment of AI models with
               human-like visual reasoning abilities in understanding visual attributes, physical
               properties, and dynamics of both rigid objects and soft objects while devising
               goal-oriented solutions. We evaluated a range of AI models and found that they
               still struggle to achieve satisfactory performance, which shows that current AI
               models still lack physical commonsense for the continuum, especially soft-bodies,
-              and illustrates the value of the proposed dataset.
-            </p>
-            <p>
-              We hope the <span class="dnerf">ContPhy</span> fosters advancements in AI perception and reasoning in diverse
+              and illustrates the value of the proposed dataset. We hope the <span class="dnerf">ContPhy</span> fosters advancements in AI perception and reasoning in diverse
               physical environments, bridging the gap between human and machine intelligence
               in the physical world.
+            </span>
             </p>
+          </div>
+        </div>
+        <br/>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-10">
+            <video id="video3" autoplay muted loop playsinline height="100%", class="showcase-qa">
+              <source src="static/videos/teasers/dialogue.mp4"
+                      type="video/mp4">
+            </video>
           </div>
         </div>
         <div id="content6">
@@ -205,11 +207,11 @@
           <br/>
           <br/>
           <h2 class="title is-3 has-text-centered">Motivation</h2>
-          <p class="content has-text-centered"> <span style="font-size: 24px;color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <!-- <p class="content has-text-centered"> <span style="font-size: 24px;color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
             The motivation is derived from a range of everyday soft materials and their interaction with rigid objects, whose physical behaviors
           or functions vary because of their diverse physical properties.
           <br>
-          </span></p>
+          </span></p> -->
           <div class="columns is-vcentered is-centered">
             
             <div class="column is-10 has-text-centered">
@@ -217,14 +219,15 @@
             </div>
           </div>
           <h2 class="content has-text-justified">
-            <p>
-            a) Gasoline flows more fluently than
-            glue due to lower viscosity, while oil with lower density tends to float above water. b) Poplin and
-            canvas exhibit surface wrinkles with varying granularity due to their distinct bending compliance.
-            c) The lifting approach requires less force due to the re-distributed tensile forces facilitated by the
-            movable pulley. d) Trajectories of tennis ball and dough ball demonstrate their differing elasticity and
-            plasticity.
-            </p>
+            <span style="font-size: 20px;color: black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              The motivation is derived from a range of everyday soft materials and their interaction with rigid objects,
+              whose physical behaviors or functions vary because of their diverse physical properties. a) Gasoline 
+              flows more fluently than glue due to lower viscosity, while oil with lower density tends to float 
+              above water. b) Poplin and canvas exhibit surface wrinkles with varying granularity due to their 
+              distinct bending compliance. c) The lifting approach requires less force due to the re-distributed
+              tensile forces facilitated by the movable pulley. d) Trajectories of tennis ball and dough ball 
+              demonstrate their differing elasticity and plasticity.
+            </span>
           </h2>
         </div>
       <!-- </div>
@@ -873,6 +876,36 @@
 
 <section class="section">
   <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div id="content10">
+          <br/>
+          <br/>
+          <br/>
+          <h2 class="title is-2"><span style="color: rgb(255, 106, 131);">ContPRO</span>, An Oracle Model</h2>
+          <div class="columns is-vcentered">
+            <div class="column is-7 has-text-centered">
+              <img src="static/images/ContPRO.png" alt="distribution" class="showcase-qa">
+            </div>
+            <div class="column is-5 has-text-centered">
+              <h2 class="content has-text-justified">
+                <p>We introduce <strong>Cont</strong>inuum <strong>P</strong>hysical <strong>R</strong>easoning <strong>O</strong>racle Model, <strong>ContPRO</strong>, which marries physics-based
+                dynamics models with the recent large language models which enjoy the advantages of both models, precise dynamic predictions, and interpretable reasoning.</p>
+                <br>
+                <p> The figure shows the model architecture for ContPRO. With specific
+                  prompts and questions, code LLM will generate Python code for physical reasoning. Differentiable
+                  Physics-based Predictor will predict dynamics in the scenario with 3D point cloud input (as an <strong>oracle</strong> input). Code
+                  Execution Module utilizes physical APIs as well as physical rules to output answers directly.</p>
+                <p>We evaluate ContPRO in the fluid scenario and analyze comprehensively. 
+                  The great performance of ContPRO-Oracle, with the initial input of 
+                  cloud points that cannot be directly perceived in the real world, 
+                  serves as a guide and oracle for future AI models.</p>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-10">
@@ -897,36 +930,6 @@
         </div>
       </div>
       
-    </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <div id="content10">
-          <br/>
-          <br/>
-          <br/>
-          <h2 class="title is-2">Our Oracle Model: <span style="color: rgb(191, 91, 108);">ContPRO</span></h2>
-          <div class="columns is-vcentered">
-            <div class="column is-7 has-text-centered">
-              <img src="static/images/ContPRO.png" alt="distribution" class="showcase-qa">
-            </div>
-            <div class="column is-5 has-text-centered">
-              <h2 class="content has-text-justified">
-                <p>We introduce <strong>Cont</strong>inuum <strong>P</strong>hysical <strong>R</strong>easoning <strong>O</strong>racle Model, <strong>ContPRO</strong>, which marries physics-based
-                dynamics models with the recent large language models which enjoy the advantages of both models, precise dynamic predictions, and interpretable reasoning.</p>
-                <br>
-                <p> The figure shows the model architecture for ContPRO. With specific
-                  prompts and questions, code LLM will generate Python code for physical reasoning. Differentiable
-                  Physics-based Predictor will predict dynamics in the scenario with 3D point cloud input (as an <strong>oracle</strong> input). Code
-                  Execution Module utilizes physical APIs as well as physical rules to output answers directly.</p>
-                <p>We evaluate ContPRO in the fluid scenario and analyze comprehensively. 
-                  The great performance of ContPRO-Oracle, with the initial input of 
-                  cloud points that cannot be directly perceived in the real world, 
-                  serves as a guide and oracle for future AI models.</p>
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
     <!--/ Abstract. -->
     <div class="columns is-centered has-text-centered">
