@@ -893,16 +893,10 @@
             <div class="column has-text-centered">
               <h2 class="content has-text-justified">
                 <p>We introduce <strong>Cont</strong>inuum <strong>P</strong>hysical <strong>R</strong>easoning <strong>O</strong>racle Model, <strong>ContPRO</strong>, which marries physics-based
-                dynamics models with the recent large language models which enjoy the advantages of both models, precise dynamic predictions, and interpretable reasoning.</p>
-                <br>
-                <p> The figure shows the model architecture for ContPRO. With specific
-                  prompts and questions, code LLM will generate Python code for physical reasoning. Differentiable
-                  Physics-based Predictor will predict dynamics in the scenario with 3D point cloud input (as an <strong>oracle</strong> input). Code
-                  Execution Module utilizes physical APIs as well as physical rules to output answers directly.</p>
-                <p>We evaluate ContPRO in the fluid scenario and analyze comprehensively. 
-                  The great performance of ContPRO-Oracle, with the initial input of 
-                  cloud points that cannot be directly perceived in the real world, 
-                  serves as a guide and oracle for future AI models.</p>
+                dynamics models with the recent large language models which enjoy the advantages of both models, precise dynamic predictions, and interpretable reasoning. With questions, predefined APIs, and specific prompts, an LLM will play as a
+                  program parser that translates questions into code snippets. The visual perception module predicts objects’ location and static attributes.
+                  The physical simulation module predicts dynamics. The symbolic execution module executes the code snippet to output the answer.</p>
+                
               </h2>
             </div>
           </div>
@@ -917,13 +911,10 @@
           <br/>
           <br/>
           <h2 class="title is-2">Experiments</h2>
-          <div class="columns is-vcentered">
-            <div class="column is-2 has-text-centered">
-            </div>
-            <div class="column is-8 has-text-centered">
-              <img src="static/images/experiments.png" alt="experiments" class="showcase-qa">
-            </div>
-            <div class="column is-2 has-text-centered">
+          <br>
+          <div class="columns is-centered is-vcentered">
+            <div class="column is-12 has-text-centered">
+              <img src="static/images/experiment.png" alt="experiments" class="showcase-qa">
             </div>
           </div>
           <h2 class="content has-text-justified">
