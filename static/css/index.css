@@ -362,3 +362,17 @@ video {
   line-height: 1; /* Adjust for vertical alignment */
   padding-right: 8px; /* Spacing from the next letter */
 }
+
+pre code .token.number,
+pre code .token.operator,
+pre code .token.tag {
+  all: inherit;
+  color: #905;
+  background: inherit;
+}
+
+pre {
+  max-height: 400px;
+  overflow: auto; 
+  border-radius: 20px;
+}

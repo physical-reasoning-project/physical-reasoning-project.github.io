@@ -12,6 +12,8 @@
         rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="./static/css/prism.css" />
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -26,6 +28,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script defer src="./static/js/prism.js"></script>
 </head>
 <body>
 
@@ -892,6 +895,72 @@
                   The physical simulation module predicts dynamics. The symbolic execution module executes the code snippet to output the answer.</p>
                 
               </h2>
+            </div>
+          </div>
+          <br>
+          <div class="columns is-centered is-vcentered">
+            <div class="column is-10 has-text-centered">
+              <h4><strong>
+                Qualitative Results of ContPRO Generated Python Programs</strong>
+              </h4>
+              <pre>
+                <code class="language-python">
+# Is the mass of the green cube greater than half that of the purple sphere?
+def execute_command(video):
+    rope_scene = SoftScene(video, 'rope')
+    green_cube = rope_scene.find("green cube")
+    purple_sphere = rope_scene.find("purple sphere")
+
+    green_cube_mass = rope_scene.query_single('mass', green_cube[0])
+    purple_sphere_mass = rope_scene.query_single('mass', purple_sphere[0])
+
+    if green_cube_mass is not None and purple_sphere_mass is not None:
+        return bool_to_yesno(green_cube_mass > 0.5 * purple_sphere_mass)
+    else:
+        return "can not answer"
+
+# What can we do to let most of the pink fluid enter black container? | Remove green stick
+def execute_command(video):
+    fluid_scene = SoftScene(video, 'fluid')
+    pink_fluid = fluid_scene.find("pink fluid")
+    black_container = fluid_scene.find("black container")
+
+    gd_init_event = fluid_scene.register_event([], "remove", "green stick")
+    fluid_gd_scene = fluid_scene.init_dyn_simulation(gd_init_event)
+
+    flag = fluid_gd_scene.happen([pink_fluid], "entering", [black_container])
+
+    return bool_to_yesno(flag)
+
+# Is the blue pillar finally in touch with the yellow plate?
+def execute_command(video):
+    cloth_scene = SoftScene(video, 'cloth')
+    blue_pillar = cloth_scene.find("blue pillar")
+    yellow_plate = cloth_scene.find("yellow plate")
+
+    pred_init_event = cloth_scene.register_event([], "simulate", "")
+    cloth_pred_scene = cloth_scene.init_dyn_simulation(pred_init_event)
+
+    flag = cloth_pred_scene.happen([blue_pillar, yellow_plate], "touching", "")
+
+    return bool_to_yesno(flag)                  
+
+# If we removed the red floating wall and other balls, which pit would the black ball drop into?
+def execute_command(video):
+    ball_scene = SoftScene(video, 'ball')
+    black_ball = ball_scene.find("black ball")
+    pits = ball_scene.find("pit")
+
+    cf_init_event = ball_scene.register_event([], "remove", "red floating wall and other balls")
+    ball_cf_scene = ball_scene.init_dyn_simulation(cf_init_event)
+
+    for pit in pits:
+        if ball_cf_scene.happen([black_ball], "droping", pit):
+            return pit
+
+    return "can not answer"
+                </code>
+              </pre>
             </div>
           </div>
         </div>
