@@ -123,24 +123,26 @@
   <a href="#content1">Fluid</a>
   <a href="#content2">Rope</a>
   <a href="#content3">Cloth</a>
-  <a href="#content4">Ball</a>
-  <a href="#content10"><strong><span style="color: rgb(255, 106, 131);">ContPRO</span></strong></a> -->
+  <a href="#content4">Ball</a> -->
   <a href="#content7">Question Statistics</a>
-  <a href="#content8">Experiments of MLLM Prompting</a>
+  <a href="#content8">MLLM Prompting</a>
+  <a href="#content10">More Baselines</a>
   <a href="#content9">Details</a>
 </nav>
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="columns is-centered has-text-centered">
+      <div class="columns is-centered has-text-left">
         
         <div class="column is-full-widescreen">
           <!-- Intro. -->
+              <h2 class="title is-4"><span style="color: rgb(192, 101, 116);">Thanks for reviewers' time and kind advice! </span></h2> 
               <h2 class="title is-3">Menu</h2> 
-              <h4 class="title is-5"><span style="color: rgb(192, 101, 116);">Thanks for reviewers' time and kind advice! </span></h4> 
               <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content7">Templated and LLM-Paraphrased Question Statistics</a></h4> 
               <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content8">Experiments of Various Prompting Methods on MLLMs</a></h4> 
+              <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content10">Experiments of More Baselines</a></h4> 
+              <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content9">Experimental Details</a></h4> 
           <!-- <div class="exampletoggle">
               <div id="show1" onmouseover="showexample(1)" class="active">Example 1</div>
               <div id="show2" onmouseover="showexample(2)">Example 2</div>
@@ -247,7 +249,8 @@
           <p>
             Figures are listed following the table.
           </p>
-          <table><tr><th>Question Generation Method</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th></tr><tr><th>Scenario</th><td>Fluid</td><td>Fluid</td><td>Rope</td><td>Rope</td><td>Cloth</td><td>Cloth</td><td>Ball</td><td>Ball</td></tr><tr><th>Lexical Diversity: TTR</th><td>0.0096</td><td>0.052</td><td>0.0096</td><td>0.053</td><td>0.0089</td><td>0.068</td><td>0.0066</td><td>0.049</td></tr><tr><th>Lexical Diversity: Word Distribution</th><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td></tr><tr><th>QA Diversity: Question Types</th><td>7 Types, See figure</td><td>7 Types, See figure</td><td>8 Types, See figure</td><td>8 Types, See figure</td><td>6 Types, See figure</td><td>6 Types, See figure</td><td>5 Types, See figure</td><td>5 Types, See figure</td></tr><tr><th>Syntactic Diversity: Sentence Length Average / Variance</th><td>13.1/3.9</td><td>13.6/10.7</td><td>13.0/6.9</td><td>13.0/11.3</td><td>12.2/8.5</td><td>11.7/11.4</td><td>15.2/10.2</td><td>15.6/19.2</td></tr><tr><th>Readability Scores: Flesch-Kincaid Grade Level</th><td>4.4</td><td>4.5</td><td>3.1</td><td>3.1</td><td>4.1</td><td>3.9</td><td>4.0</td><td>4.1</td></tr></table>
+          <table><tr><th>Question Generation Method</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>ComPhy</th><th>CLEVRER</th></tr><tr><th>Scenario</th><td>Fluid</td><td>Fluid</td><td>Rope</td><td>Rope</td><td>Cloth</td><td>Cloth</td><td>Ball</td><td>Ball</td><td>-</td><td>-</td></tr><tr><th>Lexical Diversity: TTR</th><td>0.0096</td><td>0.052</td><td>0.0096</td><td>0.053</td><td>0.0089</td><td>0.068</td><td>0.0066</td><td>0.049</td><td>0.0005</td><td>0.00008</td></tr><tr><th>Lexical Diversity: Word Distribution</th><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td></tr><tr><th>QA Diversity: Question Types</th><td>7 Types, See Figure</td><td>7 Types, See Figure</td><td>8 Types, See Figure</td><td>8 Types, See Figure</td><td>6 Types, See Figure</td><td>6 Types, See Figure</td><td>5 Types, See Figure</td><td>5 Types, See Figure</td><td>14 Types, See Figure</td><td>8 Types, See Figure</td></tr><tr><th>Syntactic Diversity: Sentence Length Average / Variance</th><td>13.1/3.9</td><td>13.6/10.7</td><td>13.0/6.9</td><td>13.0/11.3</td><td>12.2/8.5</td><td>11.7/11.4</td><td>15.2/10.2</td><td>15.6/19.2</td><td>12.0/8.7</td><td>12.2/12.6</td></tr><tr><th>Readability Scores: Flesch-Kincaid Grade Level</th><td>4.4</td><td>4.5</td><td>3.1</td><td>3.1</td><td>4.1</td><td>3.9</td><td>4.0</td><td>4.1</td><td>4.0</td><td>5.3</td></tr></table>
+          <!-- <table><tr><th>Question Generation Method</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th></tr><tr><th>Scenario</th><td>Fluid</td><td>Fluid</td><td>Rope</td><td>Rope</td><td>Cloth</td><td>Cloth</td><td>Ball</td><td>Ball</td></tr><tr><th>Lexical Diversity: TTR</th><td>0.0096</td><td>0.052</td><td>0.0096</td><td>0.053</td><td>0.0089</td><td>0.068</td><td>0.0066</td><td>0.049</td></tr><tr><th>Lexical Diversity: Word Distribution</th><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td></tr><tr><th>QA Diversity: Question Types</th><td>7 Types, See figure</td><td>7 Types, See figure</td><td>8 Types, See figure</td><td>8 Types, See figure</td><td>6 Types, See figure</td><td>6 Types, See figure</td><td>5 Types, See figure</td><td>5 Types, See figure</td></tr><tr><th>Syntactic Diversity: Sentence Length Average / Variance</th><td>13.1/3.9</td><td>13.6/10.7</td><td>13.0/6.9</td><td>13.0/11.3</td><td>12.2/8.5</td><td>11.7/11.4</td><td>15.2/10.2</td><td>15.6/19.2</td></tr><tr><th>Readability Scores: Flesch-Kincaid Grade Level</th><td>4.4</td><td>4.5</td><td>3.1</td><td>3.1</td><td>4.1</td><td>3.9</td><td>4.0</td><td>4.1</td></tr></table> -->
           <!-- <table><tr><th>Question Generation Method</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Template-Based</th><th>LLM-Paraphrased</th><th>Typical Values in Natural Language Corpus</th></tr><tr><th>Scenario</th><td>Fluid</td><td>Fluid</td><td>Rope</td><td>Rope</td><td>Cloth</td><td>Cloth</td><td>Ball</td><td>Ball</td><td></td></tr><tr><th>Lexical Diversity: TTR</th><td>0.0096</td><td>0.052</td><td>0.0096</td><td>0.053</td><td>0.0089</td><td>0.068</td><td>0.0066</td><td>0.049</td><td>0.02 to 0.5</td></tr><tr><th>Lexical Diversity: Word Distribution</th><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td></td></tr><tr><th>QA Diversity: Question Types</th><td>7 Types, See Fugure</td><td>7 Types, See Fugure</td><td>8 Types, See Fugure</td><td>8 Types, See Fugure</td><td>6 Types, See Fugure</td><td>6 Types, See Fugure</td><td>5 Types, See Fugure</td><td>5 Types, See Fugure</td><td></td></tr><tr><th>Syntactic Diversity: Sentence Length Average / Variance</th><td>13.1/3.9</td><td>13.6/10.7</td><td>13.0/6.9</td><td>13.0/11.3</td><td>12.2/8.5</td><td>11.7/11.4</td><td>15.2/10.2</td><td>15.6/19.2</td><td>Average: 15 to 20</td></tr><tr><th>Readability Scores: Flesch-Kincaid Grade Level</th><td>4.4</td><td>4.5</td><td>3.1</td><td>3.1</td><td>4.1</td><td>3.9</td><td>4.0</td><td>4.1</td><td>3.0 to 5.0 is considered easily understandable by the average 3th to 5th grader. </td></tr></table> -->
           <!-- <table><tr><td>/</td><td>Template-Based</td><td>Template-Based</td><td>Template-Based</td><td>Template-Based</td><td>LLM Paraphrased</td><td>LLM Paraphrased</td><td>LLM Paraphrased</td><td>LLM Paraphrased</td><td>Typical Values in Natural Language Corpus</td></tr><tr><td>Linguistic Statistics</td><td>Fluid</td><td>Rope</td><td>Cloth</td><td>Ball</td><td>Fluid</td><td>Rope</td><td>Cloth</td><td>Ball</td><td>/</td></tr><tr><td>Lexical Diversity: TTR</td><td>0.0096</td><td>0.0096</td><td>0.0089</td><td>0.0066</td><td>0.052</td><td>0.053</td><td>0.068</td><td>0.049</td><td>0.02 to 0.5</td></tr><tr><td>Lexical Diversity: Word Distr</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>See Figure</td><td>N/A</td></tr><tr><td>QA Diversity: Question Type Number</td><td>7 Types, See Fugure</td><td>8 Types, See Fugure</td><td>6 Types, See Fugure</td><td>5 Types, See Fugure</td><td>7 Types, See Fugure</td><td>8 Types, See Fugure</td><td>6 Types, See Fugure</td><td>5 Types, See Fugure</td><td>N/A</td></tr><tr><td>Syntactic Diversity: Sentence Length Average / Variance</td><td>13.1/3.9</td><td>13.0/6.9</td><td>12.2/8.5</td><td>15.2/10.2</td><td>13.6/10.7</td><td>13.0/11.3</td><td>11.7/11.4</td><td>15.6/19.2</td><td>15 to 20</td></tr><tr><td>Readability Scores: Flesch-Kincaid Grade Level</td><td>4.4</td><td>3.1</td><td>4.1</td><td>4.0</td><td>4.5</td><td>3.1</td><td>3.9</td><td>4.1</td><td>A score of 5.0 to 8.0 is considered easily understandable by the average 5th to 8th grader. </td></tr></table> -->
           <br/>
@@ -259,6 +262,17 @@
           <!-- <div class="columns is-vcentered"> -->
             <div class="column is-12 has-text-centered">
               <img src="static/images/pie2.png" alt="distribution" class="showcase-qa">
+            </div>
+            <div class="columns is-vcentered">
+              <div class="column is-6 has-text-centered">
+                <p><strong>Question Type Distribution of CLEVRER Dataset</strong></p>
+                <img src="static/images/additional/clv_typ.png" alt="distribution" class="interpolation-chart" style="width: 50%;">
+              </div>
+              <div class="column is-6 has-text-centered">
+                <p><strong>Question Type Distribution of ComPhy Dataset</strong></p>
+                <img src="static/images/additional/com_typ.png" alt="distribution" class="interpolation-chart" style="width: 50%;">
+              </div>
+              
             </div>
             
           <!-- </div> -->
@@ -318,6 +332,19 @@
               <img src="static/images/additional/2-4.png" alt="distribution" class="interpolation-pie">
             </div>
           </div>
+          <div class="columns is-vcentered">
+            <div class="column is-6 has-text-centered">
+              <p><strong>Word Distribution of CLEVRER Dataset</strong></p>
+              <img src="static/images/additional/clv_wd.png" alt="distribution" class="interpolation-chart" style="width: 50%;">
+            </div>
+            <div class="column is-6 has-text-centered">
+              <p><strong>Word Distribution of ComPhy Dataset</strong></p>
+              <img src="static/images/additional/com_wd.png" alt="distribution" class="interpolation-chart" style="width: 50%;">
+            </div>
+            
+          </div>
+
+          
       <!-- </div> -->
       <!-- <div class="column is-four-fifths">
         <div id="content8">
@@ -359,7 +386,13 @@
             <img src="static/images/mllm_performance2.png" alt="distribution" class="showcase-qa" style="width: 70%; display: block; margin: auto;">
           <!-- </div> -->
           <br>
-          <h2 class="content has-text-justified">
+         
+
+
+          <br>
+
+
+          <!-- <h2 class="content has-text-justified">
             (For convenience of reference) This is the comparison between baselines and human on ContPhy evaluation. We list a small number of selected values among the results from various question families, <strong>Prop</strong>erty, <strong>Counter</strong>factual,
             <strong>Goal</strong>-driven and <strong>Pred</strong>ictive questions. Accuracies are reported with per <strong>opt</strong>ion and per <strong>ques</strong>tion.
           </h2>
@@ -367,8 +400,309 @@
             <div class="column is-8 has-text-centered">
               <img src="static/images/experiment.png" alt="experiments" class="showcase-qa" style="width: 80%; display: block; margin: auto;">
             </div>
-          </div>
+          </div> -->
           
+        </div>
+
+        <div id="content10">
+          <br>
+          <br>
+          <br>
+          <h2 class="title is-3"><span style="color: rgb(192, 101, 116);"></span>Experiments of More Baselines</h2> 
+          <!-- <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt to paraphrase questions</h2>  -->
+          <!-- code here -->
+          <br>
+          <table><tr><th></th><th>Gemini</th><th>GPT-4v</th><th>Previous Vision Best</th><th>PIP</th><th>PhyDNet</th><th>Violet</th><th>CNN-LSTM</th><th>CNN-LSTM+PC</th><th>MAC</th><th>MAC+PC </th></tr><tr><th>Rope Avg.</th><td>31.5</td><td>34.1</td><td>50.1</td><td>41.6</td><td>48.9</td><td>45.4</td><td>45.9</td><td>48</td><td>44.9</td><td>47.3 </td></tr><tr><th>Fluid Avg.</th><td>25.2</td><td>29.7</td><td>42.1</td><td>35.8</td><td>39.1</td><td>39.8</td><td>37.3</td><td>38.5</td><td>32.6</td><td>37.8 </td></tr><tr><th>Cloth Avg.</th><td>45</td><td>49.8</td><td>61.8</td><td>54</td><td>56.5</td><td>59.6</td><td>57.2</td><td>59.1</td><td>56</td><td>57.8. </td></tr><tr><th>Ball Avg.</th><td>43</td><td>41.5</td><td>53.4</td><td>41.2</td><td>46.7</td><td>42.9</td><td>49.7</td><td>55.9</td><td>43.6</td><td>52.1 </td></tr><tr><th>Rope P</th><td>35.5</td><td>48</td><td>60.7</td><td>31.5</td><td>59</td><td>51.7</td><td>52.7</td><td>55</td><td>53.3</td><td>57.7 </td></tr><tr><th>Rope CO</th><td>48.2</td><td>42</td><td>76.2</td><td>75.2</td><td>77.7</td><td>76</td><td>74</td><td>75.4</td><td>74.2</td><td>76 </td></tr><tr><th>Rope CQ</th><td>12</td><td>11.3</td><td>50.7</td><td>48.3</td><td>47.9</td><td>43.1</td><td>45</td><td>45.5</td><td>39.8</td><td>45.5 </td></tr><tr><th>Rope GO</th><td>51.6</td><td>57</td><td>56</td><td>50.6</td><td>54.4</td><td>55.2</td><td>51.2</td><td>53.8</td><td>50.3</td><td>51.7 </td></tr><tr><th>Rope GQ</th><td>10.3</td><td>12.1</td><td>6.7</td><td>2.2</td><td>5.6</td><td>1.1</td><td>6.7</td><td>10.1</td><td>6.7</td><td>5.6 </td></tr><tr><th>Fluid P</th><td>10</td><td>25</td><td>54</td><td>37</td><td>51.3</td><td>50.9</td><td>54</td><td>55.3</td><td>30</td><td>50.7 </td></tr><tr><th>Fluid CO</th><td>47.3</td><td>53.3</td><td>56.8</td><td>49.1</td><td>59.5</td><td>60.4</td><td>55</td><td>55.4</td><td>56.5</td><td>57.4 </td></tr><tr><th>Fluid CQ</th><td>5.1</td><td>5.1</td><td>8.6</td><td>6</td><td>10.3</td><td>1.7</td><td>8.6</td><td>9.5</td><td>6.9</td><td>7.8 </td></tr><tr><th>Fluid GO</th><td>44.4</td><td>53.8</td><td>67.7</td><td>67.7</td><td>55.9</td><td>67.3</td><td>57.3</td><td>58.1</td><td>51.2</td><td>58.5 </td></tr><tr><th>Fluid GQ</th><td>11.3</td><td>7.5</td><td>41.3</td><td>41.3</td><td>40</td><td>41.2</td><td>22.5</td><td>27.5</td><td>17.5</td><td>25 </td></tr><tr><th>Fluid PO</th><td>52.4</td><td>50</td><td>53.8</td><td>45.5</td><td>51.7</td><td>53.2</td><td>51.4</td><td>53.2</td><td>53.5</td><td>51.9 </td></tr><tr><th>Fluid PQ</th><td>5.8</td><td>13</td><td>12.7</td><td>3.8</td><td>4.8</td><td>3.8</td><td>12.5</td><td>10.6</td><td>12.5</td><td>13.5 </td></tr><tr><th>Cloth P</th><td>42</td><td>49</td><td>59.3</td><td>54</td><td>58.7</td><td>55</td><td>46.7</td><td>47.3</td><td>59.3</td><td>59.3 </td></tr><tr><th>Cloth PO</th><td>50.1</td><td>53</td><td>68.8</td><td>61.6</td><td>63.5</td><td>68.2</td><td>67.5</td><td>68.3</td><td>57.9</td><td>60.8 </td></tr><tr><th>Cloth PQ</th><td>43</td><td>47.5</td><td>57.3</td><td>46.3</td><td>47.3</td><td>55.7</td><td>57.3</td><td>61.7</td><td>50.7</td><td>53.3 </td></tr><tr><th>Ball P</th><td>54</td><td>45</td><td>54.7</td><td>54</td><td>52.7</td><td>48</td><td>54.7</td><td>55.3</td><td>48</td><td>52.7 </td></tr><tr><th>Ball CO</th><td>60.9</td><td>66.7</td><td>66.1</td><td>63.7</td><td>67.2</td><td>65.6</td><td>64.2</td><td>66.9</td><td>66.1</td><td>66.4 </td></tr><tr><th>Ball CQ</th><td>29.6</td><td>46.9</td><td>41.8</td><td>24.6</td><td>44.3</td><td>41.8</td><td>41.8</td><td>47.5</td><td>3.3</td><td>45.9 </td></tr><tr><th>Ball GO</th><td>54.1</td><td>51.4</td><td>58.1</td><td>54.1</td><td>57.4</td><td>57.4</td><td>54.1</td><td>60.4</td><td>58.1</td><td>52.6 </td></tr><tr><th>Ball GQ</th><td>24.6</td><td>18</td><td>38.9</td><td>22.2</td><td>21.1</td><td>21.1</td><td>20</td><td>36.7</td><td>18.9</td><td>21.1 </td></tr><tr><th>Ball PO</th><td>51.7</td><td>45.4</td><td>67.4</td><td>62.9</td><td>67.4</td><td>64.4</td><td>67.4</td><td>71.2</td><td>64.4</td><td>70.5 </td></tr><tr><th>Ball PQ</th><td>25.9</td><td>17.2</td><td>46.6</td><td>6.8</td><td>17</td><td>2.3</td><td>45.5</td><td>53.4</td><td>46.6</td><td>55.7 </td></tr></table>
+          <br>
+        </div>  
+
+        <div id="content9">
+          <br>
+          <br>
+          <br>
+          <h2 class="title is-3"><span style="color: rgb(192, 101, 116);"></span>Details</h2> 
+          <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Logical Steps</h2>
+          
+          <div class="columns is-vcentered">
+            <div class="column is-6 has-text-centered">
+              <img src="static/images/additional/fluid_steps.png" alt="distribution" class="interpolation-chart">
+            </div>
+            <div class="column is-6 has-text-centered">
+              <img src="static/images/additional/rope_steps.png" alt="distribution" class="interpolation-chart">
+            </div>
+          </div>
+          <div class="columns is-vcentered">
+            <div class="column is-6 has-text-centered">
+              <img src="static/images/additional/cloth_steps.png" alt="distribution" class="interpolation-chart">
+            </div>
+            <div class="column is-6 has-text-centered">
+              <img src="static/images/additional/ball_steps.png" alt="distribution" class="interpolation-chart">
+            </div>
+          </div>
+
+
+          <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt to paraphrase questions</h2> 
+          <!-- code here -->
+          <pre>
+<code class="language-python"># Prompt Example: Paraphrase the question
+PROMPT = ("I am looking for assistance in paraphrasing this question. "
+          "My primary goal is to ensure that the essence and meaning of the question, along with the content "
+          "of each option, remain unchanged. It is crucial that the sequence of the options is preserved so "
+          "that the correct answer corresponds directly with the original question. Below, I will provide the "
+          "question with its options. Please rephrase it as diversely as possible, maintaining strict adherence "
+          "to their original meaning. Make question readable and understandable for common people as well. "
+          "Please only return paraphrased question (with its paraphrased options if it has). Do not add any other text. "
+          "Please keep the color name and the object name unchanged. "
+          "Please do not change the word \"elastic\"/\"plastic\" or \"elasticity\"/\"plasticity\". "
+          "If the object name has \"the other\" description, let this description stay unchanged. "
+          "If you think the option is too hard to rephrase, you can keep it unchanged. "
+          "Also, keep the option format unchanged."
+          "For example, if I give you the following question:\n\n"
+          "If the gray stick were removed, which stick would orange fluid pass?\nA. Pink stick\nB. Brown stick\nC. Cyan stick\n\n"
+          "You may response:\n\n"
+          "If the gray stick were not there, which stick would orange liquid flow through?\nA. Pink stick\nB. Cyan stick\nC. Cyan stick\n\n"
+          "PLEASE STRICTLY FOLLOW above response format. Otherwise we could not use program to process your response. "
+          "OK, here is the original question you will paraphrase.\n\n")
+          f"{questions to paraphrase}\n\n"
+          "Thank you for your assistance!")</code>
+          </pre>
+
+          <br>
+          <br>
+          <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt of Scenario-Specific Guidelines</h2> 
+          <!-- code here -->
+          <pre>
+<code class="language-python"># Prompt Example: Scenario-Specific Guidelines
+PROMPT = ("For now I am giving you a set of frames extract from a video, with some questions related to the video. You need to answer questions in the given order. "
+          "For each question please answer it in a fixed format following the comment after the question. "
+          "For the overall output, you need to list the answers for all questions in the original question order, and divide them by \";\". "
+          "For example, if you have two questions, and the answers are \"A B C\" and \"yes\", then you need to respond with \"A B C;yes\". "
+          "Please do NOT add any other text in your response. Thank you!")
+SCENARIO_INSTRUCTIONS={
+    "fluid": (f"{PROMPT}"
+            "Here is some additional prompts for you." 
+            "Scenario Introduction: In this device, various liquids of different densities and viscosities, " 
+            "each represented by distinct colors, are released from corresponding emitters situated at the "
+            "uppermost part of the apparatus. Under the influence of gravity, these liquids descend and traverse "
+            "a series of fixed ramps (resembling sticks). This arrangement causes alterations in their flow direction. "
+            "Ultimately, the liquids are funneled into containers at the bottom. This process highlights distinctive "
+            "behaviors arising from the interaction of multiple fluids, attributable to their significantly varied densities. "
+            "Our research is oriented towards formulating inquiries pertaining to the physical properties of these liquids and "
+            "the dynamic trajectories they exhibit."),
+    "rope": (f"{PROMPT}"
+            "Here is some additional prompts for you."
+            "Scenario Introduction: An array of pulleys, including both movable and fixed types, along with anchor points, "
+            "is arranged on a wall. Ropes are configured with their ends connected to pulleys, loads, or anchor points, and "
+            "can be wound around the pulleys. These loads possess varying masses, interacting with other forces in the system, "
+            "leading to the emergence of distinct motion patterns. | The primary objective of the model is to identify the tension "
+            "distributions within this elementary rope system. Additionally, it is tasked with recognizing potential correlations "
+            "or constraints among objects in motion, such as the coordinated movement of loads and the rotation of pulleys on a "
+            "single rope. Moreover, the model is expected to infer numerical relationships between the loads' masses."),
+    "cloth": (f"{PROMPT}" 
+            "Here is some additional prompts for you."
+            "Scenario Introduction: A small table hosts an assortment of objects, including pillars and plates of varying sizes, "
+            "colors, and masses. Two square pieces of cloth, each possessing distinct stretching, bending characteristics, and "
+            "frictional properties, are gripped at one edge and moved forward to cover these objects, causing possible collision "
+            "events. Cloths are then promptly released. The fabric obstructs the view of the objects but also delineates their "
+            "shapes through its deformable surface. Objects may topple over if they exceed a certain height or have low mass, "
+            "resulting in observable changes in the fabric's dynamic 3D surface geometry.This scenario serves as a test for a "
+            "model's capacity to discern the physical attributes of the fabrics and to predict the spatial behavior of the "
+            "concealed objects in dynamic situations."), 
+    "soft": (f"{PROMPT}" 
+           "Here is some additional prompts for you."
+           "Scenario Introduction: A playground contains obstacles of different color, and pose, along with pits randomly "
+           "arranged within. Soft balls with varying deformation resistance or plasticity yield are launched randomly within "
+           "the space, with varying initial positions. These balls undergo a sequence of dynamic movements, including bouncing "
+           "and permanent deformation. Ultimately, some may collide with obstacles and fall into pits. This experimental scenario "
+           "serves as a test to determine whether the model can accurately discern the elasticity and plasticity properties of the "
+           "soft bodies and moreover make dynamic predictions and inferences based on these observations.")
+}</code>
+          </pre>
+
+
+          <br>
+          <br>
+          <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt of In-Context Examples</h2> 
+          <!-- code here -->
+          <pre>
+<code class="language-python"># Prompt Example: In-Context Examples
+SCENARIO_EXAMPARS = {
+    "fluid": # final 17 as the example
+        [
+            "Here are some additional examples for you to get the feeling of how to solve the problem.",
+            [data_dirs["fluid"]["videos"] + "/17/frames/output_Full_ori/frame_00247.png"],
+            "Above is the last frame of example video. The example questions are: \
+                (1)\"Is the density of the blue fluid greater than that of the green fluid?\" \
+                (2)\"Will the yellow fluid which is emitting at the last frame finally enter the white container?\" \
+                    The correct answers for these questions are (1)\"no\" (2)\"no\". \
+                    \n\nOK. Since you have got some examples for reference. The following questions are for you!"
+        ],
+    "rope": # final2 27 as the example
+        [
+            "Here are some additional examples for you to get the feeling of how to solve the problem.",
+            [data_dirs["rope"]["videos"] + "/27/frames/output_Full_ori/frame_00000.png"],
+            [data_dirs["rope"]["videos"] + "/27/frames/output_Full_ori/frame_00031.png"],
+            [data_dirs["rope"]["videos"] + "/27/frames/output_Full_ori/frame_00062.png"],
+            "Above are some sampled sequential frames of example video. The example questions are: \
+                (1)\"Is the mass of the cyan sphere greater than half that of the gray sphere?\" \
+                (2)\"If the cyan sphere were far much heavier, which direction would the brown pulley rotate? A. Anti-clockwise B. Clockwise C. Not affected\" \
+                    The correct answers for these questions are (1)\"no\" (2)\"B\". \
+                    \n\nOK. Since you have got some examples for reference. The following questions are for you!"
+        ],
+    "cloth": # final2 32 as the example
+        [
+            "Here are some additional examples for you to get the feeling of how to solve the problem.",
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00000.png"],
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00080.png"],
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00095.png"],
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00142.png"],
+            "Above are some selected sequential frames of example video. The example questions are: \
+                (1)\"Is the left cloth much easier to bend or have wrinkles than the other?\" \
+                (2)\"Is the elasticity of the right cloth much greater than that of the other?\" \
+                (3)\"Does the orange pillar collide with the gray plate?\" \
+                (4)\"Which phrase below can best describe the final pose of the cyan plate? A. Standing upright B. Leaning C. Lying horizontally\" \
+                    The correct answers for these questions are (1)\"yes\" (2)\"no\" (3)\"no\" (4)\"C\". \
+                    \n\nOK. Since you have got some examples for reference. The following questions are for you!"
+        ],
+    "soft": # final 9 as the example
+        [
+            "Here are some additional examples for you to get the feeling of how to solve the problem.",
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00000.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00020.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00025.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00035.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00087.png"],
+            "Above are some selected sequential frames of example video. The example questions are: \
+                (1)\"Is the elasticity of the orange ball much greater than the blue ball?\" \
+                (2)\"Is the plasticity of the cyan ball much greater than the orange ball?\" \
+                (3)\"Which pit will the cyan ball finally drop into? A. The left pit B. The right pit C. It will not drop into any pits\" \
+                    The correct answers for these questions are (1)\"yes\" (2)\"yes\" (3)\"A\". \
+                    \n\nOK. Since you have got some examples for reference. The following questions are for you!"
+        ]
+}</code>
+          </pre>
+
+
+          <br>
+          <br>
+          <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt of Human Explained Examples</h2> 
+          <!-- code here -->
+          <pre>
+<code class="language-python"># Prompt Example: Human Explained Examples
+  SCENARIO_HUMAN_EXPL = {
+    "fluid": # final 17 as the example
+        [
+            "Here are some additional detailed guidance/tutorial for you to get the feeling of how to solve the problems.",
+            [data_dirs["fluid"]["videos"] + "/17/frames/output_Full_ori/frame_00000.png"],
+            [data_dirs["fluid"]["videos"] + "/17/frames/output_Full_ori/frame_00247.png"],
+            "Above 2 images are the first and the last frames from an example video. "
+            "In the next question-answering part we will give you some sparsely sampled frames in another similar video. In both example and target videos, "
+            "users will firstly see colored fluids emitted from the top emitters which look like colored cubes. Then the fluids will drop upon and flow down "
+            "along several colored ramps which look like sticks, and finally the fluids will enter one or several colored containers at the bottom, which constructed by several long sticks. "
+            "Make sure you can detect these key objects. The fluids have different colors, which represent different densities. The fluids will collide with each other and the ramps during the process. "
+            "Finally in the container they will stratify into obvious layers. Note that the lighter fluid will float on the heavier fluid! This is very important when you choose answers about density. "
+            "Also note that the process is governed by the gravity. The questions will be about the density, the flow direction, the collision, and the final container of the fluids. "
+            "At the end of the video, there might be some fluids starting emitting but not yet entering any containers. You need to predict which container and stick they will contact with. "
+            "\nTake the above 2 example images as example, in the last frame, you can see blue fluid is floating upon the green fluid in the white container, while the yellow fluid is floating upon "
+            "the green fluid in the gray container. So you can answer the density question based on this observation, which means for most of the time you can only analyze the last frame to determine the density relations. "
+            "\n Also, in the last frame, you may notice the green fluid is emitting on left top side. You can predict that, under the gravity, it will drop onto the orange stick, flow along the orange stick, and then drop onto the green stick, "
+            "then flow along the green stick. Then it will finally drop into the white container. Through this reasoning logic chain, you can solve some problems like the following examples. "
+            "\nThe example questions are: "
+            "(1)\"Is the density of the blue fluid greater than that of the green fluid?\" "
+            "(2)\"Will the green fluid which is emitting at the last frame finally enter the gray container?\" "
+            "The correct answers for these questions are (1)\"no\" (2)\"no\". "
+            "\n\nOK. Since you have got some examples for reference. The following questions are for you! Forget the above images now and just focus on the following images."
+        ],
+    "rope": # final2 27 as the example
+        [
+            "Here are some additional detailed guidance/tutorial for you to get the feeling of how to solve the problems.",
+            [data_dirs["rope"]["videos"] + "/27/frames/output_Full_ori/frame_00000.png"],
+            [data_dirs["rope"]["videos"] + "/27/frames/output_Full_ori/frame_00031.png"],
+            [data_dirs["rope"]["videos"] + "/27/frames/output_Full_ori/frame_00062.png"],
+            "Above 3 images are the first, the 31st, and the 62th frames from an example video. "
+            "In the next question-answering part we will give you some sparsely sampled frames in another similar video. In both example and target videos, "
+            "users will firstly see some pulleys, some fixed on the wall, only able to rotate around itself, some movable and rotatable. Fixed pulleys are "
+            "fixed by fixed cylinders at their center. You may also observe colored spheres or cubes connected by ropes. The ropes are wound around pulleys. "
+            "The spheres or cubes have different colors, which represent different masses. These objects are statically released at the beginning of the video. "
+            "Due to gravity and the tension of the rope, the pulley-rope system may show various dynamic behaviors. And you can infer some properties in this visual dynamics. "
+            "\nTake the above 3 example images as example, you can see, in the sequential dynamics, the cyan sphere was lifted by the rope despite of gravity, and the gray sphere dropped. "
+            "the gray sphere is connected to the brown movable pulley by a short gray rope. The cyan sphere is connected to the red rope which is wound around the orange pulley, brown pulley, and the gray pulley. "
+            "The other end of the red rope is connected to a white fixed point, which looks like a rectangular cuboid. So you can infer that the tension in the red rope is probably half of that in the gray short rope, "
+            "which approximately equals to the gravity of the gray sphere. We can know that the tension in the red rope approximately equals to the gravity of the cyan sphere. Thus, when you see the cyan sphere rises, "
+            "you can infer that the mass of the cyan sphere is less than half that of the gray sphere. You may continue your reasoning process. If we make the cyan sphere much heavier, it will drag the red rope down, "
+            "causing the brown pulley lifted due to the existance of the orange pulley and the rope length constraint. So the left end of the brown pulley will be lifted while the right side is static because of "
+            "the other side of the red rope is connected to a fixed point. Thus we can draw a conclusion that the brown movable pulley would rotate clockwise if the cyan sphere were much heavier. "
+            "\nThrough this reasoning logic chain, you can solve some problems like the following examples. "
+            "\nThe example questions are: "
+            "(1)\"Is the mass of the cyan sphere greater than half that of the gray sphere?\" "
+            "(2)\"If the cyan sphere were far much heavier, which direction would the brown pulley rotate? A. Anti-clockwise B. Clockwise C. Not affected\" "
+            "The correct answers for these questions are (1)\"no\" (2)\"B\". "
+            "\n\nOK. Since you have got some examples for reference. The following questions are for you! Forget the above images now and just focus on the following images."
+        ],
+    "cloth": # final2 32 as the example
+        [
+            "Here are some additional detailed guidance/tutorial for you to get the feeling of how to solve the problems.",
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00000.png"],
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00080.png"],
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00095.png"],
+            [data_dirs["cloth"]["videos"] + "/32/frames/output_Full_ori/frame_00142.png"],
+            "Above 4 images are the first, the 80th, the 95th, and the 142th frames from an example video. "
+            "In the next question-answering part we will give you some sparsely sampled frames in another similar video. In both example and target videos, "
+            "users will firstly see two pairs of objects respectively placed on the left and right sides of a table. A pair of objects consists of a colored pillar at the front and a colored plate behind. "
+            "Individual objects have different masses, some really heavy, some really light. Two square pieces of cloth, each possessing distinct stretching, bending characteristics, and frictional properties, "
+            "are gripped at one edge and moved forward to cover these objects, causing possible collision events. Users can observe the surface deformation of the cloths, which may help users to infer the falling "
+            "or collision event happening behind the cloth and can indicate the final pose of the objects. "
+            "\nTake the above 4 example images as example, you can see in the first frame, there are yellow pillar left, cyan plate left, orange pillar right, and gray plate right. "
+            "From the 80th and 95th frame, users may infer from the contour of the cloth that the yellow pillar might have fallen down, and the cyan plate might have fallen down as well (due to the collision between pillar and plate). "
+            "As for the right pair of objects, the orange pillar seems not to have moved. Maybe it is because the orange pillar is too heavy to push down. From the 142th frame, user may also infer that the gray plate is still standing as well."
+            "And the cyan plate and the yellow pillar are finally both lying down horizonally on the table, covered by the cloth. So you can answer the questions about the final pose of the objects based on these observations. "
+            "As for the bending compliance question, you can infer from the wrinkles on each cloth. The left cloth has more fine-grained wrinkles, shown especially on its edge or contour. In contrast, the right cloth's edges are more smooth curves. "
+            "So you can answer the bending compliance question based on this observation. Also, you can infer the elasticity of the cloth from the texture distortion of the cloth. The left cloth has more "
+            "distortion compared with the original texture when it is dragged, stretched, and collided into. While the right cloth's texture is relatively more stable when it is manipulated, indicating that it is more stiff in elasticity or stretchiness. "
+            "\nThrough this reasoning logic chain, you can solve some problems like the following examples. "
+            "\nThe example questions are: "
+            "(1)\"Is the left cloth much easier to bend or have wrinkles than the other?\" "
+            "(2)\"Is the elasticity of the right cloth much greater than that of the other?\" "
+            "(3)\"Does the orange pillar collide with the gray plate?\" "
+            "(4)\"Which phrase below can best describe the final pose of the cyan plate? A. Standing upright B. Leaning C. Lying horizontally\" "
+            "The correct answers for these questions are (1)\"yes\" (2)\"no\" (3)\"no\" (4)\"C\". "
+            "\n\nOK. Since you have got some examples for reference. The following questions are for you! Forget the above images now and just focus on the following images."
+        ],
+    "soft": # final 9 as the example
+        [
+            "Here are some additional detailed guidance/tutorial for you to get the feeling of how to solve the problems.",
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00000.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00020.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00025.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00035.png"],
+            [data_dirs["soft"]["videos"] + "/9/frames/output_Full_ori/frame_00087.png"],
+            "Above 5 images are the first, the 20th, the 25th, the 35th, and the 87th frames from an example video."
+            "In the next question-answering part we will give you some sparsely sampled frames in another similar video. In both example and target videos, "
+            "users will firstly see three colored balls free falling from a high position, then dropping onto the colored ramps, colliding with ramps, and them keep moving. "
+            "The balls have different colors, which represent different elasticity and/or plasticity. Among the three balls, one of them is obviously plastic and easy to permanently deform, "
+            "one is obviously elastic, non-plastic, and easy to deform but will quickly recover to the original shape. The last ball is non-elastic and non-plastic, which seems to be an underformable rigid ball. "
+            "You have to distinguish which one is plastic, which one is elastic, and which one is rigid. The balls will collide with obstacles and fall into pits. There are two pits on the playground, on the left and right, "
+            "as you can see in the example images. You need to predict which pit the ball will finally drop into if it haven't. "
+            "\nTake the above 5 example images as example, you can see in the first frame, 3 balls are statically released at high positions by invisible hands. "
+            "In the 20th frame, the orange ball is colliding with the cyan ramp, causing significant deformation, while the other two balls are still falling. "
+            "In the 25th frame, the orange ball finishes colliding and bounces up, recovering its shape back to original, indicating it is very elastic, while the cyan ball is colliding with the green ramp, causing significant deformation. "
+            "The blue ball is colliding with the blue ramp, yet no significant deformation shown. "
+            "In the 35th frame, the cyan ball finishes colliding and bounces up, but unable to recover its shape back to original, indicating it is permanently deformed and very plastic. "
+            "The blue ball finishes collision and bounces forward. Judging from its behavior and shape change, blue ball seems like a rigid ball, without elasticity and plasticity. "
+            "In the 87th frame, the orange ball and the blue ball are entering the left and right pits respectively. And the cyan ball is still slowly sliding at the left shore of the left pit, moving towards the left pit. "
+            "So you can image it will next enter the left pit. Then based on the above observation, analysis, and inference, you can simply answer relative questions. "
+            "\nThrough this reasoning logic chain, you can solve some problems like the following examples. "
+            "\nThe example questions are: "
+            "(1)\"Is the elasticity of the orange ball much greater than the blue ball?\" "
+            "(2)\"Is the plasticity of the cyan ball much greater than the orange ball?\" "
+            "(3)\"Which pit will the cyan ball finally drop into? A. The left pit B. The right pit C. It will not drop into any pits\" "
+            "The correct answers for these questions are (1)\"yes\" (2)\"yes\" (3)\"A\". "            
+            "\n\nOK. Since you have got some examples for reference. The following questions are for you! Forget the above images now and just focus on the following images."
+        ]
+}</code>
+          </pre>
+
+
         </div>
       <!-- </div> -->
       
