@@ -430,6 +430,41 @@
           <!-- <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt to paraphrase questions</h2>  -->
           <!-- code here -->
           <br>
+          <p>We added a new transformer-based video-QA baseline, Violet, which takes 
+            videos as input, can be directly fine-tuned on our dataset. We showed the performance 
+            of Violet in Table (R3-3) and compared it with other fine-tuned vision baselines and 
+            zero-shot video baselines (MLLMs). The results of Violet are fine-tuned based on 
+            the pre-trained checkpoint on YT180, WebVid2.5M and CC3M.
+            </p>
+            <br>
+          <p>
+            Based on the results shown in Table (R3-3), we can find that the fine-tuned Violet 
+            exhibits excellent overall performance. Violet achieves competitive results with the 
+            best performance of all previous vision models in some settings (such as Rope CO and
+             Fluid GO), and even surpasses the best in Fluid CO and Ball CQ. Compared with zero-shot 
+             video-language models, which are GPT-4V and Gemini, Violet excels in most of the 
+             settings, showing the advantages of fine-tuning large pre-trained models on ContPhy's 
+             videos. However, the performance of Violet is far away from human performance, showing 
+             the challenges of our ContPhy datasets.
+           </p><br>
+           <p>
+            Due to the contraint time slots of the rebuttal period, we have not setup the evaluation pipeline for Vl-adapter, since the environment dependency of the feature extraction stage of VL-Adapter is quite complex. We will add this baseline in the later version.</p>
+          <br><br>
+          <p>
+            During this rebuttal, we have implemented PIP and PhyDNet for the proposed ContPhy dataset. Based on the original implementation released by the authors, we first generated object masks based on each question and fed them into models, together with the video features. For the open-ended questions, we added a fully-connecter layer to predict the answer labels with a cross-entropy loss.
+            
+           
+           Results are shown in Table (R1-2). PIP and PhyDNet achieve competitive overall performance and excel in some settings (e.g. counterfactual questions in fluid setting) than previous best performance from vision models. However, these specialized models also have limitations in some scenarios like Rope and Cloth. We hypothesize the reasons are that these models are mainly designed for physical reasoning tasks with simple visual primitives, like sphere collision and movement. However, our dataset focuses on continuum objects in diverse environments and different question types, which makes it difficult for these models to grasp the physical rules behind the scenarios. We will add the new baselines into the later version of the paper.
+          </p>
+          <br>
+          <br>
+          <p>
+            As suggested by the reviewer, we experiment with point cloud and add these features to CNN-LSTM and MAC baselines. We first utilize ULIP-2[A] pre-trained models with PointBert[B] backbones to extract features for all object point clouds in the scenarios. These features are concatenated together with the vision input, and are fed into vision baselines. Results are shown in Table (R2-3).
+            
+           
+           With the help of point clouds, vision models are exposed to large improvements in almost all settings. We articulate that point cloud features can improve vision model performance since it provides additional information like object locations and spatial relationship, which is important to predict objects' dynamics. We will add such analysis into the later version.
+          </p>
+          <br>
           <table><tr><th></th><th>Gemini</th><th>GPT-4v</th><th>Previous Vision Best</th><th>PIP</th><th>PhyDNet</th><th>Violet</th><th>CNN-LSTM</th><th>CNN-LSTM+PC</th><th>MAC</th><th>MAC+PC </th></tr><tr><th>Rope Avg.</th><td>31.5</td><td>34.1</td><td>50.1</td><td>41.6</td><td>48.9</td><td>45.4</td><td>45.9</td><td>48</td><td>44.9</td><td>47.3 </td></tr><tr><th>Fluid Avg.</th><td>25.2</td><td>29.7</td><td>42.1</td><td>35.8</td><td>39.1</td><td>39.8</td><td>37.3</td><td>38.5</td><td>32.6</td><td>37.8 </td></tr><tr><th>Cloth Avg.</th><td>45</td><td>49.8</td><td>61.8</td><td>54</td><td>56.5</td><td>59.6</td><td>57.2</td><td>59.1</td><td>56</td><td>57.8. </td></tr><tr><th>Ball Avg.</th><td>43</td><td>41.5</td><td>53.4</td><td>41.2</td><td>46.7</td><td>42.9</td><td>49.7</td><td>55.9</td><td>43.6</td><td>52.1 </td></tr><tr><th>Rope P</th><td>35.5</td><td>48</td><td>60.7</td><td>31.5</td><td>59</td><td>51.7</td><td>52.7</td><td>55</td><td>53.3</td><td>57.7 </td></tr><tr><th>Rope CO</th><td>48.2</td><td>42</td><td>76.2</td><td>75.2</td><td>77.7</td><td>76</td><td>74</td><td>75.4</td><td>74.2</td><td>76 </td></tr><tr><th>Rope CQ</th><td>12</td><td>11.3</td><td>50.7</td><td>48.3</td><td>47.9</td><td>43.1</td><td>45</td><td>45.5</td><td>39.8</td><td>45.5 </td></tr><tr><th>Rope GO</th><td>51.6</td><td>57</td><td>56</td><td>50.6</td><td>54.4</td><td>55.2</td><td>51.2</td><td>53.8</td><td>50.3</td><td>51.7 </td></tr><tr><th>Rope GQ</th><td>10.3</td><td>12.1</td><td>6.7</td><td>2.2</td><td>5.6</td><td>1.1</td><td>6.7</td><td>10.1</td><td>6.7</td><td>5.6 </td></tr><tr><th>Fluid P</th><td>10</td><td>25</td><td>54</td><td>37</td><td>51.3</td><td>50.9</td><td>54</td><td>55.3</td><td>30</td><td>50.7 </td></tr><tr><th>Fluid CO</th><td>47.3</td><td>53.3</td><td>56.8</td><td>49.1</td><td>59.5</td><td>60.4</td><td>55</td><td>55.4</td><td>56.5</td><td>57.4 </td></tr><tr><th>Fluid CQ</th><td>5.1</td><td>5.1</td><td>8.6</td><td>6</td><td>10.3</td><td>1.7</td><td>8.6</td><td>9.5</td><td>6.9</td><td>7.8 </td></tr><tr><th>Fluid GO</th><td>44.4</td><td>53.8</td><td>67.7</td><td>67.7</td><td>55.9</td><td>67.3</td><td>57.3</td><td>58.1</td><td>51.2</td><td>58.5 </td></tr><tr><th>Fluid GQ</th><td>11.3</td><td>7.5</td><td>41.3</td><td>41.3</td><td>40</td><td>41.2</td><td>22.5</td><td>27.5</td><td>17.5</td><td>25 </td></tr><tr><th>Fluid PO</th><td>52.4</td><td>50</td><td>53.8</td><td>45.5</td><td>51.7</td><td>53.2</td><td>51.4</td><td>53.2</td><td>53.5</td><td>51.9 </td></tr><tr><th>Fluid PQ</th><td>5.8</td><td>13</td><td>12.7</td><td>3.8</td><td>4.8</td><td>3.8</td><td>12.5</td><td>10.6</td><td>12.5</td><td>13.5 </td></tr><tr><th>Cloth P</th><td>42</td><td>49</td><td>59.3</td><td>54</td><td>58.7</td><td>55</td><td>46.7</td><td>47.3</td><td>59.3</td><td>59.3 </td></tr><tr><th>Cloth PO</th><td>50.1</td><td>53</td><td>68.8</td><td>61.6</td><td>63.5</td><td>68.2</td><td>67.5</td><td>68.3</td><td>57.9</td><td>60.8 </td></tr><tr><th>Cloth PQ</th><td>43</td><td>47.5</td><td>57.3</td><td>46.3</td><td>47.3</td><td>55.7</td><td>57.3</td><td>61.7</td><td>50.7</td><td>53.3 </td></tr><tr><th>Ball P</th><td>54</td><td>45</td><td>54.7</td><td>54</td><td>52.7</td><td>48</td><td>54.7</td><td>55.3</td><td>48</td><td>52.7 </td></tr><tr><th>Ball CO</th><td>60.9</td><td>66.7</td><td>66.1</td><td>63.7</td><td>67.2</td><td>65.6</td><td>64.2</td><td>66.9</td><td>66.1</td><td>66.4 </td></tr><tr><th>Ball CQ</th><td>29.6</td><td>46.9</td><td>41.8</td><td>24.6</td><td>44.3</td><td>41.8</td><td>41.8</td><td>47.5</td><td>3.3</td><td>45.9 </td></tr><tr><th>Ball GO</th><td>54.1</td><td>51.4</td><td>58.1</td><td>54.1</td><td>57.4</td><td>57.4</td><td>54.1</td><td>60.4</td><td>58.1</td><td>52.6 </td></tr><tr><th>Ball GQ</th><td>24.6</td><td>18</td><td>38.9</td><td>22.2</td><td>21.1</td><td>21.1</td><td>20</td><td>36.7</td><td>18.9</td><td>21.1 </td></tr><tr><th>Ball PO</th><td>51.7</td><td>45.4</td><td>67.4</td><td>62.9</td><td>67.4</td><td>64.4</td><td>67.4</td><td>71.2</td><td>64.4</td><td>70.5 </td></tr><tr><th>Ball PQ</th><td>25.9</td><td>17.2</td><td>46.6</td><td>6.8</td><td>17</td><td>2.3</td><td>45.5</td><td>53.4</td><td>46.6</td><td>55.7 </td></tr></table>
           <br>
         </div>  
