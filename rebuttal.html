@@ -142,7 +142,7 @@
               <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content7">Templated and LLM-Paraphrased Question Statistics</a></h4> 
               <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content8">Experiments of Various Prompting Methods on MLLMs</a></h4> 
               <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content10">Experiments of More Baselines</a></h4> 
-              <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content9">Experimental Details</a></h4> 
+              <h4 class="title is-5"><span style="color: rgb(192, 101, 116);"></span><a href="#content9">Experiment Details</a></h4> 
           <!-- <div class="exampletoggle">
               <div id="show1" onmouseover="showexample(1)" class="active">Example 1</div>
               <div id="show2" onmouseover="showexample(2)">Example 2</div>
@@ -246,6 +246,7 @@
           <br/>
           <br/>
           <h2 class="title is-3">Question Statistics</h2>
+          <!-- <p> (Response to Reviewer aBrg, 7fPw)</p> -->
           <p>
             Based on reviewer's advice, we have reported the statistics of the current question version 
             and its paraphrased version. Besides recommended <strong>lexical diversity</strong> metrics such as TTR and 
@@ -392,13 +393,100 @@
           <h2 class="title is-3"><span style="color: rgb(192, 101, 116);"></span>Experiments of Various Prompting Methods on MLLM</h2> 
           <p>On this table, experimental outcomes of different prompting methods are listed. During rebuttal, we experimented different prompting methods on MLLMs that may affect their performance, such as different ways of questioning, instructing, describing, and sampling the physical events in the video.</p>
           <br>
-          <p><strong>Table Description</strong> | We compute the average scores in each scenario, as shown at row 1 to row 4.  We mark the row-wise highest value in <strong><span style="color:rgb(0, 60, 255)">blue</strong>, the second highest value in <strong><span style="color:red">red</span></strong>, as well as some other highest values in <strong>bold</strong>. The following rows (5-26) store all experimental data for detailed investigation. </p>
+          <p><strong>Table Description</strong> | We compute the average scores in each scenario, as shown at row 1 to row 4.  We mark the row-wise highest value in <strong><span style="color:rgb(0, 60, 255)">blue</strong>, the second highest value in <strong><span style="color:red">red</span></strong>, as well as some other highest values in <strong>bold</strong>. The following rows (5-26) store all experiment data for detailed investigation. </p>
           <br>
-          <p><strong>Data Analysis</strong> | We observe that the Gemini-Pro-Vision(Gemini)'s performance varies with scenarios. For rope scenario, as we pack the prompt with more helpful scenario-specific instructions, the scores significantly improve, for example, prompting with designed scenario-specific guideline, in-context QA examples, or human explained examples. Accurately describing the events in the current video with full texts, assembling NEWTON's approach, also raises performance scores. However, as for the fluid, cloth, and ball scenarios, these methods act as a somehow converse role, which is seemingly weird phenomenon.   </p>
-          <br>
+          <!-- <p><strong>Data Analysis</strong> | We observe that the Gemini-Pro-Vision(Gemini)'s performance varies with scenarios. For rope scenario, as we pack the prompt with more helpful scenario-specific instructions, the scores significantly improve, for example, prompting with designed scenario-specific guideline, in-context QA examples, or human explained examples. Accurately describing the events in the current video with full texts, assembling NEWTON's approach, also raises performance scores. However, as for the fluid, cloth, and ball scenarios, these methods act as a somehow converse role, which is seemingly weird phenomenon.   </p> -->
+          
           <table><tr><th>Model: Gemini-Pro-Vision</th><th>Human Performance</th><th>Random Choice</th><th>Average of Columns on the Right</th><th>a) Question Only (Visual Input, 0-shot)</th><th>b) Question Only (Text Only)</th><th>c) Scenario-Specific Guideline</th><th>d) In-Context QA Examples</th><th>e) Human Explained Examples</th><th>f) Upsampled Video (11→16 Frames, Higher Resolution)</th><th>g) LLM-Paraphrased Questions (Visual Input, 0-shot)</th><th>h) LLM-Paraphrased Questions (Text Only)</th><th>i) NEWTON Approach (Text Only)</th></tr><tr><th>Average Rope</th><th><span style="color: rgba(3, 88, 235, 0.883);">85.2</span> </th><td>31.1 </td><td>31.1 </td><td>31.5 </td><td>28.6 </td><th>34.1 </th><th>33.5 </th><th><span style="color: rgba(235, 0, 39, 0.883);">36.2</span> </th><td>29.9 </td><td>27.9 </td><td>26.1 </td><th>32.3 </th></tr><tr><th>Average Fluid</th><th><span style="color: rgba(3, 88, 235, 0.883);">67.9</span> </th><th>31.2 </th><td>26.1 </td><td>25.2 </td><th>31.0 </th><td>25.1 </td><td>26.4 </td><td>23.1 </td><td>23.6 </td><td>23.4 </td><th><span style="color: rgba(235, 0, 39, 0.883);">32.9</span> </th><td>23.9 </td></tr><tr><th>Average Cloth</th><th><span style="color: rgba(3, 88, 235, 0.883);">79.4</span> </th><td>48.3 </td><td>47.5 </td><td>45.0 </td><th><span style="color: rgba(235, 0, 39, 0.883);">53.4</span> </th><td>46.4 </td><td>45.6 </td><td>48.8 </td><td>44.4 </td><td>43.5 </td><th>51.6 </th><td>48.9 </td></tr><tr><th>Average Ball</th><th><span style="color: rgba(3, 88, 235, 0.883);">81.0</span> </th><td>42.9 </td><td>41.6 </td><td>43.0 </td><th>44.3 </th><td>43.8 </td><td>35.4 </td><td>32.1 </td><td>43.5 </td><td>43.4 </td><th><span style="color: rgba(235, 0, 39, 0.883);">46.2</span> </th><td>43.2 </td></tr><tr><td>Rope P</td><td>84.7</td><td>30.0</td><td>35.9 </td><td>35.5</td><td>34.0</td><td>33.5</td><td>34.5</td><td>39.0</td><td>34.0</td><td>30.5</td><td>32.0</td><td>50.0</td></tr><tr><td>Rope CO</td><td>90.2</td><td>51.3</td><td>47.3 </td><td>48.2</td><td>44.4</td><td>46.6</td><td>51.2</td><td>53.4</td><td>46.6</td><td>43.8</td><td>44.0</td><td>47.8</td></tr><tr><td>Rope CQ</td><td>75.0</td><td>14.7</td><td>9.6 </td><td>12.0</td><td>5.6</td><td>14.8</td><td>13.4</td><td>12.0</td><td>11.3</td><td>9.2</td><td>5.6</td><td>2.1</td></tr><tr><td>Rope GO</td><td>91.9</td><td>55.2</td><td>52.1 </td><td>51.6</td><td>48.9</td><td>54.7</td><td>56.1</td><td>57.4</td><td>48.9</td><td>49.3</td><td>47.1</td><td>54.7</td></tr><tr><td>Rope GQ</td><td>84.0</td><td>4.5</td><td>10.7 </td><td>10.3</td><td>10.3</td><td>20.7</td><td>12.1</td><td>19.0</td><td>8.6</td><td>6.9</td><td>1.7</td><td>6.9</td></tr><tr><td>Fluid P</td><td>75.8</td><td>33.3</td><td>17.9 </td><td>10.0</td><td>28.0</td><td>22.0</td><td>24.0</td><td>21.0</td><td>19.0</td><td>11.0</td><td>22.0</td><td>4.0</td></tr><tr><td>Fluid CO</td><td>82.5</td><td>52.9</td><td>48.7 </td><td>47.3</td><td>48.0</td><td>45.7</td><td>48.3</td><td>46.0</td><td>46.3</td><td>45.0</td><td>55.3</td><td>56.0</td></tr><tr><td>Fluid CQ</td><td>60.6</td><td>6.0</td><td>4.7 </td><td>5.1</td><td>6.4</td><td>2.6</td><td>5.1</td><td>2.6</td><td>0.0</td><td>2.6</td><td>15.4</td><td>2.6</td></tr><tr><td>Fluid GO</td><td>75.0</td><td>59.9</td><td>46.0 </td><td>44.4</td><td>63.3</td><td>40.8</td><td>42.6</td><td>36.7</td><td>40.8</td><td>43.2</td><td>60.4</td><td>42.0</td></tr><tr><td>Fluid GQ</td><td>64.3</td><td>7.5</td><td>7.6 </td><td>11.3</td><td>11.3</td><td>5.7</td><td>7.5</td><td>3.8</td><td>5.7</td><td>5.7</td><td>11.3</td><td>5.7</td></tr><tr><td>Fluid PO</td><td>73.9</td><td>53.8</td><td>52.2 </td><td>52.4</td><td>51.2</td><td>53.1</td><td>51.6</td><td>48.8</td><td>49.2</td><td>52.0</td><td>54.3</td><td>57.1</td></tr><tr><td>Fluid PQ</td><td>42.9</td><td>4.8</td><td>5.5 </td><td>5.8</td><td>8.7</td><td>5.8</td><td>5.8</td><td>2.9</td><td>4.3</td><td>4.3</td><td>11.6</td><td>0.0</td></tr><tr><td>Clotd P</td><td>81.4</td><td>46.7</td><td>49.0 </td><td>42.0</td><td>54.0</td><td>46.0</td><td>54.0</td><td>54.0</td><td>47.0</td><td>39.0</td><td>48.0</td><td>57.0</td></tr><tr><td>Clotd PO</td><td>79.6</td><td>52.2</td><td>50.6 </td><td>50.1</td><td>56.1</td><td>50.1</td><td>45.9</td><td>50.3</td><td>47.7</td><td>50.1</td><td>55.7</td><td>49.2</td></tr><tr><td>Clotd PQ</td><td>77.3</td><td>46.0</td><td>42.9 </td><td>43.0</td><td>50.0</td><td>43.0</td><td>37.0</td><td>42.0</td><td>38.5</td><td>41.5</td><td>51.0</td><td>40.5</td></tr><tr><td>Ball P</td><td>76.9</td><td>53.5</td><td>53.4 </td><td>54.0</td><td>54.0</td><td>52.0</td><td>53.0</td><td>46.0</td><td>56.0</td><td>58.0</td><td>61.0</td><td>47.0</td></tr><tr><td>Ball CO</td><td>93.9</td><td>53.6</td><td>55.7 </td><td>60.9</td><td>60.1</td><td>56.4</td><td>47.3</td><td>43.2</td><td>60.5</td><td>57.2</td><td>57.6</td><td>58.4</td></tr><tr><td>Ball CQ</td><td>90.9</td><td>30.4</td><td>27.0 </td><td>29.6</td><td>37.0</td><td>28.4</td><td>13.6</td><td>7.4</td><td>34.6</td><td>27.2</td><td>28.4</td><td>37.0</td></tr><tr><td>Ball GO</td><td>89.7</td><td>55.9</td><td>55.9 </td><td>54.1</td><td>60.1</td><td>57.9</td><td>55.2</td><td>57.4</td><td>54.1</td><td>53.9</td><td>55.6</td><td>55.2</td></tr><tr><td>Ball GQ</td><td>84.6</td><td>30.2</td><td>24.2 </td><td>24.6</td><td>34.4</td><td>31.1</td><td>6.6</td><td>11.5</td><td>23.0</td><td>27.9</td><td>32.8</td><td>26.2</td></tr><tr><td>Ball PO</td><td>72.5</td><td>50.6</td><td>51.0 </td><td>51.7</td><td>47.1</td><td>52.9</td><td>51.1</td><td>43.7</td><td>50.6</td><td>52.3</td><td>56.9</td><td>52.9</td></tr><tr><td>Ball PQ</td><td>58.8</td><td>25.9</td><td>24.1 </td><td>25.9</td><td>17.2</td><td>27.6</td><td>20.7</td><td>15.5</td><td>25.9</td><td>27.6</td><td>31.0</td><td>25.9</td></tr></table>
           <!-- <table><tr><td>Model: Gemini-Pro-Vision</td><th>Human Performance</th><th>Random Choice</th><th>Average of Columns on the Right</th><td>a) Question Only</td><td>b) Question Only (Text Only)</td><td>c) Scenario-Specific Guideline</td><td>d) <br> In-Context QA Examples</td><td>e) <br>Human Explained Examples</td><td>f) <br>Upsampled Video (11→16 Frames, Higher Resolution)</td><td>g) <br> LLM-Paraphrased Questions</td><td>h) <br>LLM-Paraphrased Questions (Text Only)</td><td>i) <br>NEWTON Approach (Text Only)</td></tr><tr><td>Rope P</td><td>84.7</td><td>30.0</td><td>35.9 </td><td>35.5</td><td>34.0</td><td>33.5</td><td>34.5</td><td>39.0</td><td>34.0</td><td>30.5</td><td>32.0</td><td>50.0</td></tr><tr><td>Rope CO</td><td>90.2</td><td>51.3</td><td>47.3 </td><td>48.2</td><td>44.4</td><td>46.6</td><td>51.2</td><td>53.4</td><td>46.6</td><td>43.8</td><td>44.0</td><td>47.8</td></tr><tr><td>Rope CQ</td><td>75.0</td><td>14.7</td><td>9.6 </td><td>12.0</td><td>5.6</td><td>14.8</td><td>13.4</td><td>12.0</td><td>11.3</td><td>9.2</td><td>5.6</td><td>2.1</td></tr><tr><td>Rope GO</td><td>91.9</td><td>55.2</td><td>52.1 </td><td>51.6</td><td>48.9</td><td>54.7</td><td>56.1</td><td>57.4</td><td>48.9</td><td>49.3</td><td>47.1</td><td>54.7</td></tr><tr><td>Rope GQ</td><td>84.0</td><td>4.5</td><td>10.7 </td><td>10.3</td><td>10.3</td><td>20.7</td><td>12.1</td><td>19.0</td><td>8.6</td><td>6.9</td><td>1.7</td><td>6.9</td></tr><tr><td>Fluid P</td><td>75.8</td><td>33.3</td><td>17.9 </td><td>10.0</td><td>28.0</td><td>22.0</td><td>24.0</td><td>21.0</td><td>19.0</td><td>11.0</td><td>22.0</td><td>4.0</td></tr><tr><td>Fluid CO</td><td>82.5</td><td>52.9</td><td>48.7 </td><td>47.3</td><td>48.0</td><td>45.7</td><td>48.3</td><td>46.0</td><td>46.3</td><td>45.0</td><td>55.3</td><td>56.0</td></tr><tr><td>Fluid CQ</td><td>60.6</td><td>6.0</td><td>4.7 </td><td>5.1</td><td>6.4</td><td>2.6</td><td>5.1</td><td>2.6</td><td>0.0</td><td>2.6</td><td>15.4</td><td>2.6</td></tr><tr><td>Fluid GO</td><td>75.0</td><td>59.9</td><td>46.0 </td><td>44.4</td><td>63.3</td><td>40.8</td><td>42.6</td><td>36.7</td><td>40.8</td><td>43.2</td><td>60.4</td><td>42.0</td></tr><tr><td>Fluid GQ</td><td>64.3</td><td>7.5</td><td>7.6 </td><td>11.3</td><td>11.3</td><td>5.7</td><td>7.5</td><td>3.8</td><td>5.7</td><td>5.7</td><td>11.3</td><td>5.7</td></tr><tr><td>Fluid PO</td><td>73.9</td><td>53.8</td><td>52.2 </td><td>52.4</td><td>51.2</td><td>53.1</td><td>51.6</td><td>48.8</td><td>49.2</td><td>52.0</td><td>54.3</td><td>57.1</td></tr><tr><td>Fluid PQ</td><td>42.9</td><td>4.8</td><td>5.5 </td><td>5.8</td><td>8.7</td><td>5.8</td><td>5.8</td><td>2.9</td><td>4.3</td><td>4.3</td><td>11.6</td><td>0.0</td></tr><tr><td>Cloth P</td><td>81.4</td><td>46.7</td><td>49.0 </td><td>42.0</td><td>54.0</td><td>46.0</td><td>54.0</td><td>54.0</td><td>47.0</td><td>39.0</td><td>48.0</td><td>57.0</td></tr><tr><td>Cloth PO</td><td>79.6</td><td>52.2</td><td>50.6 </td><td>50.1</td><td>56.1</td><td>50.1</td><td>45.9</td><td>50.3</td><td>47.7</td><td>50.1</td><td>55.7</td><td>49.2</td></tr><tr><td>Cloth PQ</td><td>77.3</td><td>46.0</td><td>42.9 </td><td>43.0</td><td>50.0</td><td>43.0</td><td>37.0</td><td>42.0</td><td>38.5</td><td>41.5</td><td>51.0</td><td>40.5</td></tr><tr><td>Ball P</td><td>76.9</td><td>53.5</td><td>53.4 </td><td>54.0</td><td>54.0</td><td>52.0</td><td>53.0</td><td>46.0</td><td>56.0</td><td>58.0</td><td>61.0</td><td>47.0</td></tr><tr><td>Ball CO</td><td>93.9</td><td>53.6</td><td>55.7 </td><td>60.9</td><td>60.1</td><td>56.4</td><td>47.3</td><td>43.2</td><td>60.5</td><td>57.2</td><td>57.6</td><td>58.4</td></tr><tr><td>Ball CQ</td><td>90.9</td><td>30.4</td><td>27.0 </td><td>29.6</td><td>37.0</td><td>28.4</td><td>13.6</td><td>7.4</td><td>34.6</td><td>27.2</td><td>28.4</td><td>37.0</td></tr><tr><td>Ball GO</td><td>89.7</td><td>55.9</td><td>55.9 </td><td>54.1</td><td>60.1</td><td>57.9</td><td>55.2</td><td>57.4</td><td>54.1</td><td>53.9</td><td>55.6</td><td>55.2</td></tr><tr><td>Ball GQ</td><td>84.6</td><td>30.2</td><td>24.2 </td><td>24.6</td><td>34.4</td><td>31.1</td><td>6.6</td><td>11.5</td><td>23.0</td><td>27.9</td><td>32.8</td><td>26.2</td></tr><tr><td>Ball PO</td><td>72.5</td><td>50.6</td><td>51.0 </td><td>51.7</td><td>47.1</td><td>52.9</td><td>51.1</td><td>43.7</td><td>50.6</td><td>52.3</td><td>56.9</td><td>52.9</td></tr><tr><td>Ball PQ</td><td>58.8</td><td>25.9</td><td>24.1 </td><td>25.9</td><td>17.2</td><td>27.6</td><td>20.7</td><td>15.5</td><td>25.9</td><td>27.6</td><td>31.0</td><td>25.9</td></tr></table> -->
           <br>
+          <h2 class="title is-4">Response and Data Analysis</h2>
+            <!-- <br> -->
+            <p>1. (For Reviewer <strong>UVKV</strong>'s suggestion) For thorough evaluation, we have added 
+            a new baseline assembling <strong>NEWTON</strong>'s approach that first transforms the visual 
+            input into text description of the scene objects and their dynamics and then feed the 
+            description to the LLM. <strong>(Check more details in rebuttal text)</strong> 
+            Following the text description of the scene, the 
+            questions are added below the given information. We feed the prompt into the Gemini 
+            Pro Vision. The results are shown in table. It is shown that, 
+            the text description of the rope scene can benefit the MLLM's 
+            understanding of the physical events happening in the video, while we do not 
+            observe significant increase of performance compared with the question-only 
+            blind model in other three scenarios. <strong>We guess the reason lies in that the rope 
+            scenario is quite different from the other three in ways of describing the physical 
+            dynamics.</strong> The rope is relatively easy to predict and reason once the model knows 
+            the <strong>connection lists of ropes and the motion patterns (rotation and motion directions)</strong>. 
+            The causal relations acquired from the text are relatively obvious for pretrained 
+            language models. This reasoning chain does not involve too much physical dynamic 
+            reasoning and prediction, thus improving the performance of it on rope scenario. 
+            But as for the fluid, cloth, and ball scenarios, <strong>the question-solving process 
+            greatly involves and evaluates the language model's ability to do physical dynamic 
+            reasoning</strong>. Besides, due to the <strong>upper limit of tokens</strong> for Gemini API, we are only 
+            able to provide a small number of particles in sparsely sampled frames, which may 
+            also constrain LLMs' understanding on these temporal physical scenarios. This 
+            indicates that some of nowadays language models, such as Gemini-Pro, are not 
+            competent on continuum physical reasoning and dynamic inference, regardless of 
+            the input modality. The discussion on the related work <strong>NEWTON</strong> 
+            will be added in the later version.
+          </p>
+          <br>
+          <p>2. (For Reviewer <strong>xL5z</strong>'s suggestion) We gathered some <strong>human explanations</strong> 
+            to some <strong>carefully selected QA examples</strong> 
+            (mainly designed ourselves) and test its effectiveness by adding it into the prompt 
+            of multimodal large language models. The detailed prompt examples and experiment 
+            results can be found at the rebuttal webpage. As shown in the table, 
+            we can observe <strong>the increase of average performance in most scenarios (rope, fluid, 
+            and cloth scenarios)</strong>, which might imply that prompting with in-context examples 
+            can provide models with more information about the scene and also some evidence to 
+            support reasoning about the events. When we add detailed human explanations, the 
+            performance improves more for rope and cloth scenarios.</p>
+          <br>
+          <p>
+            3. (For Reviewer <strong>aBrg</strong>'s concerns) We design the question templates by brainstorming. 
+            About 10 people are involved in proposing, implementing, and modifying templates. More details of templates 
+            are shown in Table 3-7 and Figure 5 of our paper. At this webpage, we list more linguistic statistics of the QA dataset. 
+            Considering your concern about the effect of template-based questions, we also utilize <strong>LLMs to paraphrase</strong> 
+            the questions for <strong>better diversity</strong>. The rewording prompt we used could be checked at this page. 
+            <strong>Question statistics and MLLM's performances on template-based questions and LLM-paraphrased questions</strong> are compared 
+            in the table (Rebuttal R2-1) and table (Rebuttal R2-2). We also provide <strong>statistics of previous works</strong>, ComPhy and CLEVRER.
+            On templated and paraphrased datasets, The model performances are very close, indicating that templated QA may   
+            not affect models' performance on understanding and answering questions of physical scenarios.
+          </p>
+          <br>
+          <p>
+            4. (For Reviewer <strong>7fPw</strong>'s concerns and suggestions) (i) The advice on <strong>paraphrasing 
+            questions is quite inspirational</strong> and could contribute to the <strong>diversity</strong> of QA dataset. 
+            We have utilized Gemini-Pro to reword the questions. The prompts we use can be 
+            checked at this page. We instruct the LLM to reword the given 
+            questions <strong>as diverse as possible and keep the original meaning strictly 
+            unchanged and the content readable for common people as well</strong>. We provide 
+            some generated examples in Reviewer 7fPw's rebuttal comments. As shown in Table (Rebuttal R3-1), 
+            paraphrases from LLMs can increase the qualities of question-answer pairs in terms of 
+            lexical diversity and word distribution while keeping the semantics of QA pairs unchanged. 
+            We also compare the diversity of our generated questions with previous works, ComPhy and CLEVRER. 
+            Based on the TTR metric, our dataset is much more diverse than previous works. 
+            Based on the experiment results, the model has relatively close performance on templated and paraphrased datasets.
+            
+            (ii) For the original experiments presented in paper, 
+            The experiment was in a zero-shot setting and we did not include any scenario-specific guidelines or 
+            any in-context QA examples in prompt. During rebuttal, 
+            we carefully considered your opinion and experimented 
+            with our <strong>self-designed scenario-specific guidelines, in-context examples, 
+            as well as elaborate human explanations for example questions</strong>. 
+            During rebuttal stage, We tested <strong>full-size(1920x1080) images 
+            and raised subsampling frame number to 16 frames</strong>, which is 
+            the <strong>acceptable upper limit</strong> of Gemini-Pro-Vision's visual 
+            input. Full results and prompt examples can be checked at this page.
+
+            <strong>Packing the prompt with more scenario instructions, 
+            few-shot QA examples, and even detailed human explanations 
+            could benefit MLLM's understanding of the physical scene in 
+            various ways.</strong> But we do not discovered any benefit of 
+            upsampling the videos, probably because the MLLM (Gemini)'s 
+            visual understanding ability <strong>suffers from the upper limit of its visual API</strong>.
+          </p>
+          <br>
+          <h2 class="title is-4">Comparison with Human Performance</h2>
           <p>From method <strong>a) to i) (check table headers)</strong>, we draw the average, maximum, and minimum values of various prompting method scores on this radar chart. For reference, human performance on each question type is plotted as well. For normalization of visual effects, values on chart are processed by subtracting the random choice scores.</p>
           <br>
 <!-- of visual effects <div class="column is-8 has-text-centered"> -->
@@ -431,7 +519,7 @@
           <!-- <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt to paraphrase questions</h2>  -->
           <!-- code here -->
           <br>
-          <p>1.(Response to Reviewer <strong>7fPw</strong>) We added a new transformer-based video-QA baseline, <strong>Violet</strong>, which takes 
+          <p>1. (Response to Reviewer <strong>7fPw</strong>) We added a new transformer-based video-QA baseline, <strong>Violet</strong>, which takes 
             videos as input, can be directly fine-tuned on our dataset. We showed the performance 
             of Violet in the table and compared it with other fine-tuned vision baselines and 
             zero-shot video baselines (MLLMs). The results of Violet are fine-tuned based on 
@@ -487,8 +575,9 @@
           <br>
           <br>
           <br>
-          <h2 class="title is-3"><span style="color: rgb(192, 101, 116);"></span>Details</h2> 
+          <h2 class="title is-3"><span style="color: rgb(192, 101, 116);"></span>Experiment Details</h2> 
           <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Logical Steps</h2>
+          <h2 class="title is-5"><span style="color: rgb(192, 101, 116);"></span>(Response to Reviewer aBrg)</h2>
           
           <div class="columns is-vcentered">
             <div class="column is-6 has-text-centered">
@@ -508,7 +597,10 @@
           </div>
 
 
-          <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt to paraphrase questions</h2> 
+          <h2 class="title is-3"><span style="color: rgb(192, 101, 116);"></span>Prompting Details</h2>
+          <h2 class="title is-5"><span style="color: rgb(192, 101, 116);"></span>(Response to Reviewer UVKV, xL5z, aBrg, and 7fPw)  </h2>
+          <h2 class="title is-4"><span style="color: rgb(192, 101, 116);"></span>Prompt to paraphrase questions </h2>
+          
           <!-- code here -->
           <pre>
 <code class="language-python"># Prompt Example: Paraphrase the question
