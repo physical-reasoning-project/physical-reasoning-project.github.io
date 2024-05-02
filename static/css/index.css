@@ -173,6 +173,7 @@ body {
 .interpolation-image {
   cursor: pointer;
   transition: transform 0.2s;
+  border-radius: 8px;
   /* width: 90%;  */
   /* margin-left: 120px; 
    margin-right: 120px; */
