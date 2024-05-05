@@ -173,7 +173,7 @@ body {
 .interpolation-image {
   cursor: pointer;
   transition: transform 0.2s;
-  border-radius: 8px;
+  border-radius: 10px;
   /* width: 90%;  */
   /* margin-left: 120px; 
    margin-right: 120px; */
@@ -404,7 +404,7 @@ pre {
   border-radius: 20px;
 }
 
-.button {
+.button1 {
   background-color: #f8e7e7; /* Green background */
   border: none; /* No borders */
   color: rgb(0, 0, 0); /* White text */
@@ -417,7 +417,7 @@ pre {
   border-radius: 12px; /* Rounded corners */
 }
 
-.button:hover {
+.button1:hover {
   background-color: #fecaca; 
   text-decoration: underline; 
   font-weight: bold; 
