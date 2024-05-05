@@ -418,7 +418,7 @@ pre {
 }
 
 .button:hover {
-  background-color: #fecaca; /* Darker green background on hover */
-  text-decoration: underline; /* No underline */
-  font-weight: bold; /* Bold font weight */
+  background-color: #fecaca; 
+  text-decoration: underline; 
+  font-weight: bold; 
 }
