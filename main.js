@@ -16,16 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-document.querySelectorAll('#navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+// document.querySelectorAll('#navbar a').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//       e.preventDefault();
       
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        top: 100,
-        behavior: 'smooth'
-      });
-    });
-  });
+//       document.querySelector(this.getAttribute('href')).scrollIntoView({
+//         top: 100,
+//         behavior: 'smooth'
+//       });
+//     });
+//   });
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const video = document.getElementById('floatingVideo');
