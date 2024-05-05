@@ -404,7 +404,7 @@ pre {
   border-radius: 20px;
 }
 
-.button1 {
+.button {
   background-color: #f8e7e7; /* Green background */
   border: none; /* No borders */
   color: rgb(0, 0, 0); /* White text */
@@ -417,8 +417,8 @@ pre {
   border-radius: 12px; /* Rounded corners */
 }
 
-/* .button1:hover {
+.button:hover {
   background-color: #fecaca; 
   text-decoration: underline; 
   font-weight: bold; 
-} */
+}
