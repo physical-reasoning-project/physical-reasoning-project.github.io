@@ -403,3 +403,22 @@ pre {
   overflow: auto; 
   border-radius: 20px;
 }
+
+.button {
+  background-color: #f8e7e7; /* Green background */
+  border: none; /* No borders */
+  color: rgb(0, 0, 0); /* White text */
+  text-align: center; /* Center-aligned text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Inline-block element */
+  font-size: 20px; /* Font size */
+  margin: 2px 1px; /* Margin around the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 12px; /* Rounded corners */
+}
+
+.button:hover {
+  background-color: #fecaca; /* Darker green background on hover */
+  text-decoration: underline; /* No underline */
+  font-weight: bold; /* Bold font weight */
+}
